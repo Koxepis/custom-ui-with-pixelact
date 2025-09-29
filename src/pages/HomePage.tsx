@@ -11,7 +11,7 @@ export default function HomePage() {
             A collection of pixel-perfect UI components built with React, TypeScript, and Tailwind CSS.
           </p>
           
-          <div className="mb-12 grid grid-cols-1 gap-6 md:grid-cols-2">
+          <div className="mb-12 grid grid-cols-1 gap-6 md:grid-cols-3">
             <div className="rounded-lg border bg-card p-8">
               <h2 className="mb-4 text-2xl font-semibold">Buttons</h2>
               <p className="mb-6 text-muted-foreground">
@@ -29,6 +29,16 @@ export default function HomePage() {
               </p>
               <Link to="/inputs">
                 <Button className="w-full">View Inputs</Button>
+              </Link>
+            </div>
+
+            <div className="rounded-lg border bg-card p-8">
+              <h2 className="mb-4 text-2xl font-semibold">Containers</h2>
+              <p className="mb-6 text-muted-foreground">
+                Discover our custom container components with RPGUI-inspired styling.
+              </p>
+              <Link to="/containers">
+                <Button className="w-full">View Containers</Button>
               </Link>
             </div>
           </div>

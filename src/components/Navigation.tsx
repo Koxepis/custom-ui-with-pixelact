@@ -8,6 +8,7 @@ export default function Navigation() {
     { path: "/", label: "Home" },
     { path: "/buttons", label: "Buttons" },
     { path: "/inputs", label: "Inputs" },
+    { path: "/containers", label: "Containers" },
   ];
 
   return (
