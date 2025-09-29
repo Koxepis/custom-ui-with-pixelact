@@ -5,8 +5,8 @@
 @layer base {
   /* Local font */
   @font-face {
-    font-family: 'Kongtext';
-    src: url('/fonts/kongtext.ttf') format('truetype');
+    font-family: 'BoldPixels';
+    src: url('/fonts/BoldPixels.ttf') format('truetype');
     font-weight: 400;
     font-style: normal;
     font-display: swap;
@@ -70,7 +70,8 @@
     @apply border-border;
   }
   body {
-    @apply bg-background text-foreground font-sans;
+    @apply bg-background text-foreground;
+    font-family: "BoldPixels", system-ui, -apple-system, sans-serif;
   }
 }
 

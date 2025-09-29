@@ -15,6 +15,7 @@ export default function App() {
           <Button variant="success">Success</Button>
           <Button variant="destructive">Destructive</Button>
           <Button variant="link">Link</Button>
+          <Button variant="custom-ui">Custom UI</Button>
         </div>
       </div>
     </div>

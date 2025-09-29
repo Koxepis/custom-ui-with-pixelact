@@ -6,7 +6,7 @@ import "@/components/ui/pixelact-ui/styles/styles.css";
 import "./button.css";
 
 const pixelButtonVariants = cva(
-  "pixel__button pixel-font cursor-pointer rounded-none w-fit items-center justify-center whitespace-nowrap text-sm transition-colors transition-all duration-100",
+  "pixel__button cursor-pointer rounded-none w-fit items-center justify-center whitespace-nowrap text-sm transition-colors transition-all duration-100",
   {
     variants: {
       variant: {
@@ -16,11 +16,13 @@ const pixelButtonVariants = cva(
         success: "pixel-success__button box-shadow-margin",
         destructive: "pixel-destructive__button box-shadow-margin",
         link: "pixel-link__button bg-transparent text-link underline-offset-4 underline",
+        "custom-ui": "custom-ui-button",
       },
       size: {
         default: "h-10 px-4 py-2",
         sm: "h-9 px-3 text-xs",
         lg: "h-11 px-8 text-base",
+        rgui:"h-auto w-fit",
       },
     },
     defaultVariants: {
@@ -39,14 +41,32 @@ export interface PixelButtonProps
 const Button = React.forwardRef<
   React.ComponentRef<typeof ShadcnButton>,
   PixelButtonProps
->(({ className, variant, ...props }, ref) => {
+>(({ className, variant, size, ...props }, ref) => {
+  const isCustomUi = variant === "custom-ui";
+
+  if (isCustomUi) {
+    // For custom-ui variant, render a plain button element without shadcn styling
+    return (
+      <button
+        className={cn(
+          pixelButtonVariants({ variant, size: undefined }),
+          className
+        )}
+        ref={ref}
+        {...props}
+      />
+    );
+  }
+
   return (
     <ShadcnButton
       className={cn(
-        buttonVariants({ variant: variant as any }),
-        pixelButtonVariants({ variant }),
+        buttonVariants({ variant: variant as any, size: size as any }),
+        pixelButtonVariants({ variant, size }),
         className
       )}
+      variant={variant as any}
+      size={size as any}
       ref={ref}
       {...props}
     />

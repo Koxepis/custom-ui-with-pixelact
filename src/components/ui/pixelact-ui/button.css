@@ -1,6 +1,9 @@
 .pixel__button {
   position: relative;
   box-shadow: var(--pixel-box-shadow);
+  font-family: "BoldPixels", system-ui, -apple-system, sans-serif;
+  line-height: 1.5;
+  letter-spacing: 0.5px;
 
   &::after {
     content: "";
@@ -71,8 +74,10 @@
   color: hsl(var(--success-foreground));
 
   &::after {
-    border-right: 4px solid color-mix(in hsl, hsl(var(--success)) 70%, rgb(0, 0, 0));
-    border-bottom: 4px solid color-mix(in hsl, hsl(var(--success)) 70%, rgb(0, 0, 0));
+    border-right: 4px solid
+      color-mix(in hsl, hsl(var(--success)) 70%, rgb(0, 0, 0));
+    border-bottom: 4px solid
+      color-mix(in hsl, hsl(var(--success)) 70%, rgb(0, 0, 0));
   }
 
   &:hover {
@@ -124,11 +129,19 @@
   }
 
   &:hover {
-    background-color: color-mix(in hsl, hsl(var(--warning)) 90%, rgb(32, 32, 32));
+    background-color: color-mix(
+      in hsl,
+      hsl(var(--warning)) 90%,
+      rgb(32, 32, 32)
+    );
   }
 
   &:active {
-    background-color: color-mix(in hsl, hsl(var(--warning)) 70%, rgb(32, 32, 32));
+    background-color: color-mix(
+      in hsl,
+      hsl(var(--warning)) 70%,
+      rgb(32, 32, 32)
+    );
   }
 }
 
@@ -150,4 +163,43 @@
   &:visited {
     color: color-mix(in hsl, hsl(var(--link)) 70%, rgb(0, 0, 0));
   }
+}
+
+.custom-ui-button {
+  image-rendering: pixelated;
+  /* hide button default stuff */
+  background-color: transparent;
+  background-repeat: no-repeat;
+  border: none;
+  overflow: visible;
+  outline: none;
+  box-shadow: none; /* Override pixel__button box-shadow */
+
+  /* background */
+  background: url("/assets/button/button.png") no-repeat;
+  background-clip: padding-box;
+  background-origin: padding-box;
+  background-position: center;
+  background-size: 100% 100%;
+
+  /* default size and display */
+  max-width: 100%;
+  height: auto;
+  min-height: 60px;
+  display: inline-block;
+
+  /* padding */
+  padding: 15px 35px;
+}
+
+/* button hover */
+.custom-ui-button.hover,
+.custom-ui-button:hover {
+  background-image: url("/assets/button/button-hover.png");
+}
+
+/* button clicked */
+.custom-ui-button.down,
+.custom-ui-button:active {
+  background-image: url("/assets/button/button-down.png");
 }
