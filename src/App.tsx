@@ -4,6 +4,7 @@ import HomePage from "./pages/HomePage";
 import ButtonPage from "./pages/ButtonPage";
 import InputPage from "./pages/InputPage";
 import ContainerPage from "./pages/ContainerPage";
+import SelectPage from "./pages/SelectPage";
 
 export default function App() {
   return (
@@ -15,6 +16,7 @@ export default function App() {
           <Route path="/buttons" element={<ButtonPage />} />
           <Route path="/inputs" element={<InputPage />} />
           <Route path="/containers" element={<ContainerPage />} />
+          <Route path="/selects" element={<SelectPage />} />
         </Routes>
       </div>
     </Router>

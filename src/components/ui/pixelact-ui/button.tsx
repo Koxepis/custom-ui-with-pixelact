@@ -3,7 +3,7 @@ import { cva, type VariantProps } from "class-variance-authority";
 import { cn } from "@/lib/utils";
 import { Button as ShadcnButton, buttonVariants } from "@/components/ui/button";
 import "@/components/ui/pixelact-ui/styles/styles.css";
-import "./button.css";
+import "@/components/ui/pixelact-ui/styles/button.css";
 
 const pixelButtonVariants = cva(
   "pixel__button cursor-pointer rounded-none w-fit items-center justify-center whitespace-nowrap text-sm transition-colors transition-all duration-100",

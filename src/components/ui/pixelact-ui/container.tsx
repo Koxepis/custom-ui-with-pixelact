@@ -2,7 +2,7 @@ import * as React from "react";
 import { cva, type VariantProps } from "class-variance-authority";
 import { cn } from "@/lib/utils";
 import "@/components/ui/pixelact-ui/styles/styles.css";
-import "./container.css";
+import "@/components/ui/pixelact-ui/styles/container.css";
 
 const containerVariants = cva(
   "custom-ui-container",

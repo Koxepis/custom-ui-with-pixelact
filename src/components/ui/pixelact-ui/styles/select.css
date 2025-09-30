@@ -1,0 +1,213 @@
+/* Custom UI Select Styles */
+
+/* Select Trigger Container */
+.pixel__select {
+  position: relative;
+  box-shadow: var(--pixel-box-shadow);
+  margin: var(--box-shadow-margin);
+}
+
+/* Select Trigger Base */
+.pixel__select button {
+  border-radius: 0;
+  background: var(--select-background-image);
+  background-size: 100% 100%;
+  border: 0;
+  width: 100%;
+  min-height: 44px;
+  padding: 8px 12px;
+  font-family: inherit;
+  color: var(--select-text-color);
+  transition: all 0.2s ease;
+}
+
+.pixel__select button:hover {
+  background: var(--select-hover-background-image);
+  background-size: 100% 100%;
+  transform: translateY(-1px);
+  box-shadow: var(--select-hover-shadow);
+}
+
+.pixel__select button:active {
+  background: var(--select-active-background-image);
+  background-size: 100% 100%;
+  transform: translateY(1px);
+  box-shadow: var(--select-active-shadow);
+}
+
+.pixel__select button:focus {
+  outline: none;
+  box-shadow: var(--select-focus-shadow);
+}
+
+/* Select Content Dropdown */
+.custom-ui-select-content {
+  background: var(--select-dropdown-background-image);
+  background-size: 100% 100%;
+  border: 0;
+  border-radius: 0;
+  box-shadow: var(--select-dropdown-shadow);
+  margin-top: 4px;
+  overflow: hidden;
+}
+
+/* Select Item */
+.custom-ui-select-item {
+  border-radius: 0;
+  border-top: 3px dashed transparent;
+  border-bottom: 3px dashed transparent;
+  padding: 8px 16px;
+  margin: 2px 0;
+  transition: all 0.2s ease;
+  background: transparent;
+  color: var(--select-item-text-color);
+}
+
+.custom-ui-select-item:hover {
+  border-top-color: var(--select-item-hover-border);
+  border-bottom-color: var(--select-item-hover-border);
+  background: var(--select-item-hover-background);
+  color: var(--select-item-hover-text);
+  transform: translateX(2px);
+}
+
+.custom-ui-select-item[data-state="checked"] {
+  background: var(--select-item-selected-background);
+  color: var(--select-item-selected-text);
+  border-top-color: var(--select-item-selected-border);
+  border-bottom-color: var(--select-item-selected-border);
+}
+
+/* Select Value */
+.custom-ui-select-value {
+  color: inherit;
+  font-family: inherit;
+}
+
+/* Select Placeholder */
+.custom-ui-select-placeholder {
+  color: var(--select-placeholder-color);
+  font-style: italic;
+}
+
+/* Select Icon */
+.custom-ui-select-icon {
+  color: var(--select-icon-color);
+  transition: transform 0.2s ease;
+}
+
+.custom-ui-select-trigger[data-state="open"] .custom-ui-select-icon {
+  transform: rotate(180deg);
+}
+
+/* Pixel Font Variant */
+.custom-ui-select-trigger.pixel-font button {
+  font-family: 'BoldPixels', monospace;
+  font-size: 14px;
+  letter-spacing: 0.5px;
+}
+
+/* Disabled State */
+.custom-ui-select-trigger[data-disabled] button {
+  opacity: 0.6;
+  cursor: not-allowed;
+  background: var(--select-disabled-background-image);
+  background-size: 100% 100%;
+}
+
+.custom-ui-select-trigger[data-disabled] button:hover {
+  transform: none;
+  box-shadow: var(--pixel-box-shadow);
+  background: var(--select-disabled-background-image);
+  background-size: 100% 100%;
+}
+
+/* Custom UI Select - like custom-ui-button */
+.custom-ui-select {
+  /* Custom styling for custom-ui select */
+  image-rendering: pixelated;
+  background-color: transparent;
+  background-repeat: no-repeat;
+  border: none;
+  overflow: visible;
+  outline: none;
+  box-shadow: none;
+
+  /* background */
+  background: url("/assets/select-background-image.png") repeat repeat;
+  background-clip: padding-box;
+  background-origin: padding-box;
+  background-position: center;
+  background-size: 100% 100%;
+
+  /* default size */
+  max-width: 100%;
+  height: auto;
+  min-height: 40px;
+  display: inline-block;
+
+  /* border */
+  border-style: solid;
+  border-width: 7px 7px 7px 7px;
+  -moz-border-image: url("/assets/select-border-image.png") 10% repeat repeat;
+  -webkit-border-image: url("/assets/select-border-image.png") 10% repeat repeat;
+  -o-border-image: url("/assets/select-border-image.png") 10% repeat repeat;
+  border-image: url("/assets/select-border-image.png") 10% repeat repeat;
+
+  /* font */
+  text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black;
+  color: white;
+}
+
+.custom-ui-select button {
+  background: transparent;
+  border: none;
+  color: inherit;
+  width: 100%;
+  padding: 8px 12px;
+  font-family: inherit;
+  transition: all 0.2s ease;
+  outline: none !important;
+  box-shadow: none !important;
+  ring: none !important;
+}
+
+.custom-ui-select button:focus {
+  outline: none !important;
+  box-shadow: none !important;
+  ring: none !important;
+}
+
+.custom-ui-select button:active {
+  outline: none !important;
+  box-shadow: none !important;
+  ring: none !important;
+}
+
+.custom-ui-select:hover {
+  background: url("/assets/select-background-image.png") repeat repeat;
+  background-clip: padding-box;
+  background-origin: padding-box;
+  background-position: center;
+  background-size: 100% 100%;
+}
+
+.custom-ui-select:active {
+  background: url("/assets/select-background-image.png") repeat repeat;
+  background-clip: padding-box;
+  background-origin: padding-box;
+  background-position: center;
+  background-size: 100% 100%;
+}
+
+.custom-ui-select:focus {
+  outline: none;
+  box-shadow: none;
+  ring: none;
+}
+
+.custom-ui-select:focus-within {
+  outline: none;
+  box-shadow: none;
+  ring: none;
+}

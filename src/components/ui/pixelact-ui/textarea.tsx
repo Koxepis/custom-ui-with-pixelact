@@ -2,7 +2,7 @@ import * as React from "react";
 import { cva, type VariantProps } from "class-variance-authority";
 import { cn } from "@/lib/utils";
 import "@/components/ui/pixelact-ui/styles/styles.css";
-import "./input.css";
+import "@/components/ui/pixelact-ui/styles/input.css";
 
 const pixelTextareaVariants = cva(
   "cursor-pointer rounded-none w-full items-center justify-center whitespace-nowrap text-sm transition-colors transition-all duration-100",

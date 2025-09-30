@@ -6,6 +6,7 @@
   border: none;
   background: none;
   position: relative;
+  image-rendering: pixelated;
   
   /* Container sizing */
   box-sizing: border-box;
