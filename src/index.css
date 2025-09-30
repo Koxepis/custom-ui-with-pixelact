@@ -76,3 +76,32 @@
 }
 
 html, body, #root { height: 100%; }
+
+/* Scrollbar Styles */
+::-webkit-scrollbar {
+    width: 18px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background-image: url('/assets/scrollbar-track.png');
+    background-size: 18px 60px;
+    background-repeat: repeat-y;
+    image-rendering: pixelated;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background-image: url('/assets/scrollbar-thumb.png');
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    image-rendering: pixelated;
+}
+
+/* Buttons */
+::-webkit-scrollbar-button {
+    background-image: url('/assets/scrollbar-button.png');
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    image-rendering: pixelated;
+}

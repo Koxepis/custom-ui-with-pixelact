@@ -117,18 +117,23 @@
 }
 
 .custom-ui-container.scrollable::-webkit-scrollbar {
-  width: 8px;
+  width: 18px;
 }
 
 .custom-ui-container.scrollable::-webkit-scrollbar-track {
-  background: rgba(0, 0, 0, 0.1);
+  background-image: url('/assets/scrollbar-track.png');
+  background-size: 18px 60px;
+  background-repeat: repeat-y;
 }
 
 .custom-ui-container.scrollable::-webkit-scrollbar-thumb {
-  background: rgba(0, 0, 0, 0.3);
-  border-radius: 4px;
+  background-image: url('/assets/scrollbar-thumb.png');
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
 }
 
-.custom-ui-container.scrollable::-webkit-scrollbar-thumb:hover {
-  background: rgba(0, 0, 0, 0.5);
+.custom-ui-container.scrollable::-webkit-scrollbar-button {
+  background-image: url('/assets/scrollbar-button.png');
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
 }
