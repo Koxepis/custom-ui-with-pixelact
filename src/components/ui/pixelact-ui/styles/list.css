@@ -1,0 +1,89 @@
+/* Custom UI List Styles */
+
+/* Root list element */
+.custom-ui-list {
+  /* font and color */
+  text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black;
+  color: white;
+
+  /* default size */
+  min-height: 40px;
+  margin-top: 0px;
+
+  /* scrollers */
+  overflow-x: hidden;
+  overflow-y: scroll;
+
+  /* border */
+  border-style: solid;
+  border-width: 7px 7px 7px 7px;
+  -moz-border-image: url("/assets/select-border-image.png") 10% repeat repeat;
+  -webkit-border-image: url("/assets/select-border-image.png") 10% repeat repeat;
+  -o-border-image: url("/assets/select-border-image.png") 10% repeat repeat;
+  border-image: url("/assets/select-border-image.png") 10% repeat repeat;
+
+  /* background */
+  background: url("/assets/select-background-image.png") repeat repeat;
+  background-clip: padding-box;
+  background-origin: padding-box;
+  background-position: center;
+
+  /* reset */
+  padding-left: 0;
+  list-style: none;
+}
+
+/* Ensure UL variant keeps padding reset and stacking above neighbors */
+ul.custom-ui-list {
+  padding: 0 0 0 0 !important;
+  z-index: 100;
+}
+
+/* List items */
+.custom-ui-list li {
+  /* font */
+  text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black;
+  color: white;
+  height: 16px;
+  margin-left: 5px !important;
+
+  /* remove bullets */
+  list-style-type: none;
+
+  /* padding */
+  padding-top: 6px;
+  padding-bottom: 6px;
+  padding-left: 6px;
+
+  /* background */
+  background: url("/assets/select-background-image.png") repeat repeat;
+  background-clip: padding-box;
+  background-origin: padding-box;
+  background-position: center;
+
+  /* interactions */
+  cursor: pointer;
+}
+
+/* list options hover */
+.custom-ui-list li:hover {
+  color: yellow;
+}
+
+/* list hover */
+.custom-ui-list:hover {
+  color: yellow;
+}
+
+.custom-ui-list .custom-ui-selected {
+  background: rgba(0, 0, 0, 0.3);
+}
+
+/* Disabled state */
+.custom-ui-list[aria-disabled="true"] {
+  filter: grayscale(100%);
+  opacity: 0.6;
+  cursor: not-allowed;
+  pointer-events: none;
+}
+

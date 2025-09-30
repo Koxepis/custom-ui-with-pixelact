@@ -26,3 +26,5 @@ pnpm-debug.log*
 # pnpm store (optional local cache)
 .pnpm-store/
 
+# TypeScript incremental build info
+tsconfig.tsbuildinfo
