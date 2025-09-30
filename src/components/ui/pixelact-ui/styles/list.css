@@ -10,9 +10,9 @@
   min-height: 40px;
   margin-top: 0px;
 
-  /* scrollers */
+  /* scrollers: auto so scrollbar hides when not needed */
   overflow-x: hidden;
-  overflow-y: scroll;
+  overflow-y: auto;
 
   /* border */
   border-style: solid;

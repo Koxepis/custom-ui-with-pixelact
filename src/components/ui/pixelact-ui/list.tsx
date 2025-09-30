@@ -46,28 +46,12 @@ export const List = React.forwardRef<HTMLUListElement, ListProps>(
     const listRef = React.useRef<HTMLUListElement | null>(null);
     React.useImperativeHandle(ref, () => listRef.current as HTMLUListElement);
 
-    const itemRefs = React.useRef<Record<string, HTMLLIElement | null>>({});
-
     const focusList = () => listRef.current?.focus();
 
     const setSelected = (id: string) => {
       if (!isControlled) setInternalSelected(id);
       onValueChange?.(id);
     };
-
-    // Scroll selected item into view when selection changes
-    React.useEffect(() => {
-      if (!effectiveSelected) return;
-      const el = itemRefs.current[effectiveSelected];
-      if (el && listRef.current) {
-        const parent = listRef.current;
-        const elTop = el.offsetTop;
-        const elBottom = elTop + el.offsetHeight;
-        if (elTop < parent.scrollTop) parent.scrollTop = elTop;
-        else if (elBottom > parent.scrollTop + parent.clientHeight)
-          parent.scrollTop = elBottom - parent.clientHeight;
-      }
-    }, [effectiveSelected]);
 
     const handleKeyDown: React.KeyboardEventHandler<HTMLUListElement> = (e) => {
       if (disabled) return;
@@ -123,7 +107,7 @@ export const List = React.forwardRef<HTMLUListElement, ListProps>(
               aria-selected={selected}
               aria-disabled={item.disabled || undefined}
               className={cn(selected && "custom-ui-selected")}
-              ref={(el) => (itemRefs.current[item.id] = el)}
+              
               onClick={() => {
                 if (disabled || item.disabled) return;
                 setSelected(item.id);

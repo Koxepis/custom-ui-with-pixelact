@@ -43,6 +43,16 @@ export default function HomePage() {
             </div>
 
             <div className="rounded-lg border bg-card p-8">
+              <h2 className="mb-4 text-2xl font-semibold">Lists</h2>
+              <p className="mb-6 text-muted-foreground">
+                Explore our custom-ui list component with RPG-inspired styling and keyboard support.
+              </p>
+              <Link to="/lists">
+                <Button className="w-full">View Lists</Button>
+              </Link>
+            </div>
+
+            <div className="rounded-lg border bg-card p-8">
               <h2 className="mb-4 text-2xl font-semibold">Containers</h2>
               <p className="mb-6 text-muted-foreground">
                 Discover our custom container components with RPGUI-inspired styling.
