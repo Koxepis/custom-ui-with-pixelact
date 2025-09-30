@@ -9,6 +9,7 @@ export default function Navigation() {
     { path: "/buttons", label: "Buttons" },
     { path: "/inputs", label: "Inputs" },
     { path: "/selects", label: "Selects" },
+    { path: "/checkboxes", label: "Checkboxes" },
     { path: "/lists", label: "Lists" },
     { path: "/containers", label: "Containers" },
   ];

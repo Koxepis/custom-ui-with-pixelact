@@ -1,0 +1,31 @@
+/* Custom UI Checkbox (CSS-based) */
+
+/* Hide the native checkbox */
+input[type="checkbox"].custom-ui-checkbox {
+  display: none;
+}
+
+/* Default (golden off) */
+input[type="checkbox"].custom-ui-checkbox + label {
+  background: url('/assets/checkbox-golden-off.png') no-repeat;
+  background-size: auto 100%;
+  image-rendering: pixelated;
+  display: inline-block;
+  line-height: 24px;
+  height: 24px;
+  padding-left: 34px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+/* Checked (golden on) */
+input[type="checkbox"].custom-ui-checkbox:checked + label {
+  background: url('/assets/checkbox-golden-on.png') no-repeat;
+  background-size: auto 100%;
+  image-rendering: pixelated;
+  display: inline-block;
+  line-height: 24px;
+  height: 24px;
+  padding-left: 34px;
+}
+

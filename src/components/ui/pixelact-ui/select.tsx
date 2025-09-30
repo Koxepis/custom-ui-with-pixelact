@@ -60,7 +60,11 @@ interface SelectValueProps
 
 function SelectValue({ font, variant, ...props }: SelectValueProps) {
   return (
-    <ShadcnSelectValue className={cn("custom-ui-select-value", selectVariants({ font, variant }))} {...props} />
+    <ShadcnSelectValue
+      data-slot="select-value"
+      className={cn("custom-ui-select-value", selectVariants({ font, variant }))}
+      {...props}
+    />
   );
 }
 
@@ -77,6 +81,13 @@ function SelectTrigger({
   variant,
   ...props
 }: SelectTriggerProps) {
+  const baseTrigger =
+    "flex items-center justify-between gap-2 px-3 py-2 text-sm whitespace-nowrap outline-none transition-[color,box-shadow] " +
+    "data-[placeholder]:text-muted-foreground [&_svg:not([class*='text-'])]:text-muted-foreground " +
+    "[&_svg]:pointer-events-none [&_svg]:shrink-0 [&_svg:not([class*='size-'])]:size-4 " +
+    "disabled:cursor-not-allowed disabled:opacity-50 " +
+    "focus-visible:ring-[3px] focus-visible:ring-ring/50 focus-visible:border-ring " +
+    "aria-invalid:border-destructive aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40";
   return (
     <div
       className={cn(
@@ -86,7 +97,12 @@ function SelectTrigger({
     >
       <ShadcnSelectTrigger
         {...props}
-        className="rounded-none ring-0 w-full border-0 bg-transparent"
+        className={cn(
+          "rounded-none ring-0 w-full border-0 bg-transparent",
+          baseTrigger
+        )}
+        data-slot="select-trigger"
+        data-size="default"
       >
         {children}
       </ShadcnSelectTrigger>

@@ -47,6 +47,16 @@ export default function HomePage() {
             </div>
 
             <div className="rounded-lg border bg-card p-8">
+              <h2 className="mb-4 text-2xl font-semibold">Checkboxes</h2>
+              <p className="mb-6 text-muted-foreground">
+                Compare shadcn checkbox with pixelact-ui styled checkbox.
+              </p>
+              <Link to="/checkboxes">
+                <Button className="w-full">View Checkboxes</Button>
+              </Link>
+            </div>
+
+            <div className="rounded-lg border bg-card p-8">
               <h2 className="mb-4 text-2xl font-semibold">Lists</h2>
               <p className="mb-6 text-muted-foreground">
                 Explore our custom-ui list component with RPG-inspired styling
