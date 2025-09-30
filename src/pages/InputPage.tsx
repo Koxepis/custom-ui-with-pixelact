@@ -1,9 +1,21 @@
+import { useState } from "react";
 import { Input as ShadcnInput } from "../components/ui/input";
 import { Input as PixelInput } from "../components/ui/pixelact-ui/input";
 import { Textarea as PixelTextarea } from "../components/ui/pixelact-ui/textarea";
 import { Container } from "@/components/ui/pixelact-ui/container";
 
 export default function InputPage() {
+  // Validation states
+  const [shadcnEmail, setShadcnEmail] = useState("");
+  const [shadcnEmailError, setShadcnEmailError] = useState<string | null>(null);
+  const [pixelNumber, setPixelNumber] = useState("");
+  const [pixelNumberError, setPixelNumberError] = useState<string | null>(null);
+  const [customEmail, setCustomEmail] = useState("");
+  const [customEmailError, setCustomEmailError] = useState<string | null>(null);
+
+  const isEmail = (val: string) => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(val);
+  const isDigits = (val: string) => /^\d*$/.test(val);
+
   return (
     <div className="min-h-screen bg-background p-8">
       <div className="mx-auto max-w-4xl">
@@ -226,7 +238,7 @@ export default function InputPage() {
         {/* Interactive Examples */}
         <section className="mb-12">
           <h2 className="mb-6 text-2xl font-semibold">Interactive Examples</h2>
-          <Container variant="default">
+          <Container variant="golden">
             <div className="p-6">
             <h3 className="mb-4 text-lg font-medium">Focus States & Validation</h3>
             <div className="grid grid-cols-1 gap-6 md:grid-cols-3">
@@ -236,8 +248,21 @@ export default function InputPage() {
                   <ShadcnInput placeholder="This field is required" required />
                 </div>
                 <div>
-                  <label className="mb-2 block text-sm font-medium">Shadcn With Pattern</label>
-                  <ShadcnInput placeholder="Enter 5 digits" pattern="[0-9]{5}" />
+                  <label className="mb-2 block text-sm font-medium">Shadcn Email (with error)</label>
+                  <ShadcnInput
+                    placeholder="name@example.com"
+                    type="email"
+                    value={shadcnEmail}
+                    onChange={(e) => {
+                      const v = e.target.value;
+                      setShadcnEmail(v);
+                      setShadcnEmailError(v.length === 0 || isEmail(v) ? null : "Invalid email format");
+                    }}
+                    aria-invalid={Boolean(shadcnEmailError) || undefined}
+                  />
+                  {shadcnEmailError && (
+                    <p className="mt-1 text-xs text-destructive">{shadcnEmailError}</p>
+                  )}
                 </div>
               </div>
               <div className="space-y-4">
@@ -246,8 +271,20 @@ export default function InputPage() {
                   <PixelInput placeholder="This field is required" required />
                 </div>
                 <div>
-                  <label className="mb-2 block text-sm font-medium">Pixel With Pattern</label>
-                  <PixelInput placeholder="Enter 5 digits" pattern="[0-9]{5}" />
+                  <label className="mb-2 block text-sm font-medium">Pixel Number Only (with error)</label>
+                  <PixelInput
+                    placeholder="Numbers only"
+                    value={pixelNumber}
+                    onChange={(e) => {
+                      const v = e.target.value;
+                      setPixelNumber(v);
+                      setPixelNumberError(isDigits(v) ? null : "Please enter numbers only");
+                    }}
+                    aria-invalid={Boolean(pixelNumberError) || undefined}
+                  />
+                  {pixelNumberError && (
+                    <p className="mt-1 text-xs text-destructive">{pixelNumberError}</p>
+                  )}
                 </div>
               </div>
               <div className="space-y-4">
@@ -256,8 +293,21 @@ export default function InputPage() {
                   <PixelInput variant="custom-ui" placeholder="This field is required" required />
                 </div>
                 <div>
-                  <label className="mb-2 block text-sm font-medium">Custom UI With Pattern</label>
-                  <PixelInput variant="custom-ui" placeholder="Enter 5 digits" pattern="[0-9]{5}" />
+                  <label className="mb-2 block text-sm font-medium">Custom UI Email (with error)</label>
+                  <PixelInput
+                    variant="custom-ui"
+                    placeholder="name@example.com"
+                    value={customEmail}
+                    onChange={(e) => {
+                      const v = e.target.value;
+                      setCustomEmail(v);
+                      setCustomEmailError(v.length === 0 || isEmail(v) ? null : "Invalid email format");
+                    }}
+                    aria-invalid={Boolean(customEmailError) || undefined}
+                  />
+                  {customEmailError && (
+                    <p className="mt-1 text-xs text-destructive">{customEmailError}</p>
+                  )}
                 </div>
               </div>
             </div>

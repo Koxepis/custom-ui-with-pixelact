@@ -37,6 +37,7 @@
   padding-bottom: 5px;
   min-height: 30px;
   image-rendering: pixelated;
+  transition: box-shadow 0.15s ease, background-color 0.15s ease;
   
   /* enable text selecting */
   -webkit-touch-callout: text;
@@ -52,6 +53,23 @@
   outline: none;
   border-radius: 0;
   font-family: "BoldPixels", system-ui, -apple-system, sans-serif;
+}
+
+/* Focus/active pixel shadow */
+.custom-ui-input:focus,
+.custom-ui-input:active {
+  outline: none;
+  box-shadow: var(--pixel-box-shadow);
+}
+
+/* Error (destructive) shadow when invalid (ARIA or native) */
+.custom-ui-input[aria-invalid="true"],
+.custom-ui-input[aria-invalid="true"]:focus,
+.custom-ui-input[aria-invalid="true"]:active,
+.custom-ui-input:invalid,
+.custom-ui-input:invalid:focus,
+.custom-ui-input:invalid:active {
+  box-shadow: var(--pixel-box-shadow-destructive);
 }
 
 /* Custom UI Textarea Styles */
@@ -88,6 +106,23 @@
   outline: none;
   border-radius: 0;
   font-family: "BoldPixels", system-ui, -apple-system, sans-serif;
+}
+
+/* Focus/active pixel shadow for textarea */
+.custom-ui-textarea:focus,
+.custom-ui-textarea:active {
+  outline: none;
+  box-shadow: var(--pixel-box-shadow);
+}
+
+/* Error (destructive) shadow for textarea */
+.custom-ui-textarea[aria-invalid="true"],
+.custom-ui-textarea[aria-invalid="true"]:focus,
+.custom-ui-textarea[aria-invalid="true"]:active,
+.custom-ui-textarea:invalid,
+.custom-ui-textarea:invalid:focus,
+.custom-ui-textarea:invalid:active {
+  box-shadow: var(--pixel-box-shadow-destructive);
 }
 
 /* selection highlight for custom UI inputs */
