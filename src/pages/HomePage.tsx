@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { Button } from "../components/ui/pixelact-ui/button";
+import { Container } from "../components/ui/pixelact-ui/container";
 
 export default function HomePage() {
   return (
@@ -12,85 +13,71 @@ export default function HomePage() {
             TypeScript, and Tailwind CSS.
           </p>
 
-          <div className="mb-12 grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-4">
-            <div className="rounded-lg border bg-card p-8">
-              <h2 className="mb-4 text-2xl font-semibold">Buttons</h2>
-              <p className="mb-6 text-muted-foreground">
+          <div className="mb-12 grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-4 items-start">
+            <Container variant="default" className="flex flex-col justify-between items-center rounded-lg border bg-card p-8 h-64">
+              <h2 className="text-2xl font-semibold text-white">Buttons</h2>
+              <p className="text-white/50">
                 Explore our collection of button variants including pixel
                 buttons and custom UI buttons.
               </p>
               <Link to="/buttons">
                 <Button className="w-full">View Buttons</Button>
               </Link>
-            </div>
+            </Container>
 
-            <div className="rounded-lg border bg-card p-8">
-              <h2 className="mb-4 text-2xl font-semibold">Inputs</h2>
-              <p className="mb-6 text-muted-foreground">
+            <Container variant="default" className="flex flex-col justify-between items-center rounded-lg border bg-card p-8 h-64">
+              <h2 className="text-2xl font-semibold text-white">Inputs</h2>
+              <p className="text-white/50">
                 Check out our input components with both shadcn and pixel
                 styling options.
               </p>
               <Link to="/inputs">
                 <Button className="w-full">View Inputs</Button>
               </Link>
-            </div>
+            </Container>
 
-            <div className="rounded-lg border bg-card p-8">
-              <h2 className="mb-4 text-2xl font-semibold">Selects</h2>
-              <p className="mb-6 text-muted-foreground">
+            <Container variant="default" className="flex flex-col justify-between items-center rounded-lg border bg-card p-8 h-64">
+              <h2 className="text-2xl font-semibold text-white">Selects</h2>
+              <p className="text-white/50">
                 Compare default shadcn select with custom pixelact-ui select
                 components.
               </p>
               <Link to="/selects">
                 <Button className="w-full">View Selects</Button>
               </Link>
-            </div>
+            </Container>
 
-            <div className="rounded-lg border bg-card p-8">
-              <h2 className="mb-4 text-2xl font-semibold">Checkboxes</h2>
-              <p className="mb-6 text-muted-foreground">
+            <Container variant="default" className="flex flex-col justify-between items-center rounded-lg border bg-card p-8 h-64">
+              <h2 className="text-2xl font-semibold text-white">Checkboxes</h2>
+              <p className="text-white/50">
                 Compare shadcn checkbox with pixelact-ui styled checkbox.
               </p>
               <Link to="/checkboxes">
                 <Button className="w-full">View Checkboxes</Button>
               </Link>
-            </div>
+            </Container>
 
-            <div className="rounded-lg border bg-card p-8">
-              <h2 className="mb-4 text-2xl font-semibold">Lists</h2>
-              <p className="mb-6 text-muted-foreground">
+            <Container variant="default" className="flex flex-col justify-between items-center rounded-lg border bg-card p-8 h-64">
+              <h2 className="text-2xl font-semibold text-white">Lists</h2>
+              <p className="text-white/50">
                 Explore our custom-ui list component with RPG-inspired styling
                 and keyboard support.
               </p>
               <Link to="/lists">
                 <Button className="w-full">View Lists</Button>
               </Link>
-            </div>
+            </Container>
 
-            <div className="rounded-lg border bg-card p-8">
-              <h2 className="mb-4 text-2xl font-semibold">Containers</h2>
-              <p className="mb-6 text-muted-foreground">
+            <Container variant="default" className="flex flex-col justify-between items-center rounded-lg border bg-card p-8 h-64">
+              <h2 className="text-2xl font-semibold text-white">Containers</h2>
+              <p className="text-white/50">
                 Discover our custom container components with RPG-inspired
                 aesthetics.
               </p>
               <Link to="/containers">
                 <Button className="w-full">View Containers</Button>
               </Link>
-            </div>
-          </div>
-
-          {/* Quick Preview */}
-          <div className="rounded-lg border bg-card p-8">
-            <h2 className="mb-6 text-2xl font-semibold">Quick Preview</h2>
-            <div className="flex flex-wrap justify-center gap-4">
-              <Button>Default</Button>
-              <Button variant="secondary">Secondary</Button>
-              <Button variant="warning">Warning</Button>
-              <Button variant="success">Success</Button>
-              <Button variant="destructive">Destructive</Button>
-              <Button variant="link">Link</Button>
-              <Button variant="custom-ui">Custom UI</Button>
-            </div>
+            </Container>
           </div>
         </div>
       </div>

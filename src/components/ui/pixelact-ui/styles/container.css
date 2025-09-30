@@ -10,8 +10,6 @@
   
   /* Container sizing */
   box-sizing: border-box;
-  width: 100%;
-  min-height: 100px;
   
   /* Border image for the frame */
   border: 16px solid transparent;
@@ -21,7 +19,7 @@
   background: url("/assets/container/background-image.png") repeat;
   
   /* Padding for content */
-  padding: 16px;
+  /* padding: 16px; */
 }
 
 /* Golden variant */
@@ -44,13 +42,8 @@
 
 /* Container content area */
 .custom-ui-container-content {
-  width: 100%;
-  height: 100%;
-  min-height: 50px;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: flex-start;
+  width: fit-content;
+  display: block;
   box-sizing: border-box;
 }
 
@@ -63,10 +56,9 @@
 
 /* Container sizes */
 .custom-ui-container.small {
-  min-height: 80px;
   border-width: 12px;
   border-image: url("/assets/container/border-image.png") 12 round;
-  padding: 12px;
+  /* padding: 12px; */
 }
 
 .custom-ui-container.small.golden {
@@ -82,10 +74,9 @@
 }
 
 .custom-ui-container.large {
-  min-height: 200px;
   border-width: 20px;
   border-image: url("/assets/container/border-image.png") 20 round;
-  padding: 20px;
+  /* padding: 20px; */
 }
 
 .custom-ui-container.large.golden {

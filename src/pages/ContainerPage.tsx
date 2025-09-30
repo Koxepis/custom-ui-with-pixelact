@@ -59,7 +59,7 @@ export default function ContainerPage() {
             {/* Small Container */}
             <div>
               <h3 className="mb-4 text-lg font-medium">Small</h3>
-              <Container variant="golden" size="small">
+              <Container variant="golden">
                 <p className="text-white text-sm">Small container with reduced padding and border.</p>
               </Container>
             </div>
@@ -67,7 +67,7 @@ export default function ContainerPage() {
             {/* Default Container */}
             <div>
               <h3 className="mb-4 text-lg font-medium">Default</h3>
-              <Container variant="golden" size="default">
+              <Container variant="golden">
                 <p className="text-white text-sm">Default container size with standard padding and border.</p>
               </Container>
             </div>
@@ -75,7 +75,7 @@ export default function ContainerPage() {
             {/* Large Container */}
             <div>
               <h3 className="mb-4 text-lg font-medium">Large</h3>
-              <Container variant="golden" size="large">
+              <Container variant="golden">
                 <p className="text-white text-sm">Large container with increased padding and border.</p>
               </Container>
             </div>
@@ -117,16 +117,15 @@ export default function ContainerPage() {
         <section className="mb-12">
           <h2 className="mb-6 text-2xl font-semibold">Scrollable Container</h2>
           <div className="max-w-2xl">
-            <Container variant="grey" layout="scrollable">
+            <Container variant="grey" layout="scrollable" className="p-4">
               <h4 className="text-white text-lg font-medium mb-4">Scrollable Content</h4>
-              <div className="space-y-4">
+              <div className="space-y-3">
                 <p className="text-white text-sm">This container has a maximum height and will show a scrollbar when content overflows.</p>
-                <p className="text-white text-sm">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                <p className="text-white text-sm">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-                <p className="text-white text-sm">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
-                <p className="text-white text-sm">Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                <p className="text-white text-sm">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.</p>
-                <p className="text-white text-sm">Totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
+                {Array.from({ length: 18 }).map((_, i) => (
+                  <p key={i} className="text-white text-sm">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                  </p>
+                ))}
               </div>
             </Container>
           </div>
@@ -218,7 +217,7 @@ export default function ContainerPage() {
         <section className="mb-12">
           <h2 className="mb-6 text-2xl font-semibold">Complex Container Example</h2>
           <div className="max-w-4xl">
-            <Container variant="golden2" size="large">
+            <Container variant="golden2">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div>
                   <h4 className="text-white text-lg font-medium mb-4">User Profile</h4>
