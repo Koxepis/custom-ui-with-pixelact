@@ -1,8 +1,13 @@
+import { useState } from "react";
 import { Container } from "../components/ui/pixelact-ui/container";
 import { Button } from "../components/ui/pixelact-ui/button";
 import { Input as PixelInput } from "../components/ui/pixelact-ui/input";
 
 export default function ContainerPage() {
+  const [defaultOn, setDefaultOn] = useState(false);
+  const [goldenOn, setGoldenOn] = useState(false);
+  const [golden2On, setGolden2On] = useState(false);
+  const [greyOn, setGreyOn] = useState(false);
   return (
     <div className="min-h-screen bg-background p-8">
       <div className="mx-auto max-w-6xl">
@@ -16,36 +21,52 @@ export default function ContainerPage() {
             {/* Default Container */}
             <div>
               <h3 className="mb-4 text-lg font-medium">Default</h3>
-              <Container variant="default">
+              <Container variant="default" className="p-4 space-y-2">
                 <p className="text-white text-sm">Default container with standard border and background.</p>
-                <Button variant="custom-ui" size="sm" className="mt-4">Action</Button>
+                <Button variant="custom-ui" size="sm" className="mt-1"
+                  onClick={() => setDefaultOn((v) => !v)}>
+                  Toggle
+                </Button>
+                <p className="text-xs text-white/80">Status: {defaultOn ? <span className="text-green-400">On</span> : <span className="text-red-400">Off</span>}</p>
               </Container>
             </div>
 
             {/* Golden Container */}
             <div>
               <h3 className="mb-4 text-lg font-medium">Golden</h3>
-              <Container variant="golden">
+              <Container variant="golden" className="p-4 space-y-2">
                 <p className="text-white text-sm">Golden container with luxurious appearance.</p>
-                <Button variant="custom-ui" size="sm" className="mt-4">Action</Button>
+                <Button variant="custom-ui" size="sm" className="mt-1"
+                  onClick={() => setGoldenOn((v) => !v)}>
+                  Toggle
+                </Button>
+                <p className="text-xs text-white/80">Status: {goldenOn ? <span className="text-green-400">On</span> : <span className="text-red-400">Off</span>}</p>
               </Container>
             </div>
 
             {/* Golden2 Container */}
             <div>
               <h3 className="mb-4 text-lg font-medium">Golden 2</h3>
-              <Container variant="golden2">
+              <Container variant="golden2" className="p-4 space-y-2">
                 <p className="text-white text-sm">Alternative golden container design.</p>
-                <Button variant="custom-ui" size="sm" className="mt-4">Action</Button>
+                <Button variant="custom-ui" size="sm" className="mt-1"
+                  onClick={() => setGolden2On((v) => !v)}>
+                  Toggle
+                </Button>
+                <p className="text-xs text-white/80">Status: {golden2On ? <span className="text-green-400">On</span> : <span className="text-red-400">Off</span>}</p>
               </Container>
             </div>
 
             {/* Grey Container */}
             <div>
               <h3 className="mb-4 text-lg font-medium">Grey</h3>
-              <Container variant="grey">
+              <Container variant="grey" className="p-4 space-y-2">
                 <p className="text-white text-sm">Grey container for subtle appearance.</p>
-                <Button variant="custom-ui" size="sm" className="mt-4">Action</Button>
+                <Button variant="custom-ui" size="sm" className="mt-1"
+                  onClick={() => setGreyOn((v) => !v)}>
+                  Toggle
+                </Button>
+                <p className="text-xs text-white/80">Status: {greyOn ? <span className="text-green-400">On</span> : <span className="text-red-400">Off</span>}</p>
               </Container>
             </div>
           </div>

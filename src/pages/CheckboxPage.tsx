@@ -6,7 +6,7 @@ import { Button } from "@/components/ui/pixelact-ui/button";
 
 export default function CheckboxPage() {
   const [newsletter, setNewsletter] = useState<boolean>(true);
-  const [terms, setTerms] = useState<boolean>(false);
+  const [disabledNewsletter, setDisabledNewsletter] = useState<boolean>(false);
 
   return (
     <div className="min-h-screen bg-background p-8">
@@ -106,21 +106,22 @@ export default function CheckboxPage() {
                 </div>
                 <div className="flex items-center space-x-2">
                   <PixelCheckbox
-                    id="css-controlled-terms"
+                    id="css-controlled-newsletter-disabled"
                     variant="custom-ui"
-                    checked={terms}
-                    onCheckedChange={(v) => setTerms(Boolean(v))}
+                    checked={disabledNewsletter}
+                    onCheckedChange={(v) => setDisabledNewsletter(Boolean(v))}
+                    disabled
                   />
-                  <label htmlFor="css-controlled-terms" className="text-sm font-medium leading-none text-white">
-                    Terms accepted: {terms ? "Yes" : "No"}
+                  <label htmlFor="css-controlled-newsletter-disabled" className="text-sm font-medium leading-none text-white">
+                    Disabled Newsletter: {disabledNewsletter ? "On" : "Off"}
                   </label>
                 </div>
                 <div className="flex flex-wrap gap-2 pt-2">
                   <Button size="sm" onClick={() => setNewsletter(true)}>Enable Newsletter</Button>
                   <Button size="sm" variant="secondary" onClick={() => setNewsletter(false)}>Disable Newsletter</Button>
-                  <Button size="sm" variant="success" onClick={() => setTerms(true)}>Accept Terms</Button>
-                  <Button size="sm" variant="warning" onClick={() => setTerms(false)}>Reset Terms</Button>
-                  <Button size="sm" variant="custom-ui" onClick={() => { setNewsletter(true); setTerms(true); }}>Enable All</Button>
+                  <Button size="sm" variant="success" onClick={() => setDisabledNewsletter(true)}>Enable Disabled Newsletter</Button>
+                  <Button size="sm" variant="warning" onClick={() => setDisabledNewsletter(false)}>Disable Disabled Newsletter</Button>
+                  <Button size="sm" variant="custom-ui" onClick={() => { setNewsletter(false); setDisabledNewsletter(false); }}>Reset All</Button>
                 </div>
               </div>
             </div>

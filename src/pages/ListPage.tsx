@@ -69,8 +69,9 @@ export default function ListPage() {
                 <Button size="sm" variant="secondary" onClick={() => setSelected("cleric")}>
                   Cleric
                 </Button>
-                <Button size="sm" variant="custom-ui" onClick={() => setSelected("")}>Clear</Button>
               </div>
+
+                <Button size="sm" variant="custom-ui"  className="w-full" onClick={() => setSelected("")}>Clear</Button>
               <List
                 items={basicItems}
                 selectedId={selected || undefined}
@@ -87,7 +88,7 @@ export default function ListPage() {
             <div className="p-6 space-y-4">
               <h2 className="text-2xl font-semibold">Disabled</h2>
               <p className="text-muted-foreground">List with disabled interactions and grayscale.</p>
-              <List items={basicItems} defaultSelectedId="cleric" maxHeight={140} disabled />
+              <List className="w-56" items={basicItems} defaultSelectedId="cleric" maxHeight={140} disabled />
             </div>
           </Container>
         </div>

@@ -244,38 +244,29 @@ export default function SelectPage() {
 
         {/* Interactive Demo */}
         <div className="mt-8">
-          <Container variant="default">
+          <Container variant="default" className="w-fit">
             <div className="p-6">
               <h2 className="mb-6 text-2xl font-semibold">Interactive Demo</h2>
-              <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4">
+              <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
                 <Button
-                  onClick={() => setDefaultValue("option3")}
                   className="flex-1"
+                  onClick={() => {
+                    const pick = () => selectOptions[Math.floor(Math.random() * selectOptions.length)].value;
+                    setDefaultValue(pick());
+                    setPixelValue(pick());
+                    setAltValue(pick());
+                  }}
                 >
-                  Set Default
+                  Randomize All
                 </Button>
                 <Button
-                  onClick={() => setPixelValue("option4")}
                   className="flex-1"
-                  variant="custom-ui"
-                >
-                  Set Pixel
-                </Button>
-                <Button
-                  onClick={() => setAltValue("option2")}
-                  className="flex-1"
-                  variant="warning"
-                >
-                  Set Alt
-                </Button>
-                <Button
+                  variant="secondary"
                   onClick={() => {
                     setDefaultValue("");
                     setPixelValue("");
                     setAltValue("");
                   }}
-                  className="flex-1"
-                  variant="secondary"
                 >
                   Clear All
                 </Button>

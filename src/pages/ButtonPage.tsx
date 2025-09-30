@@ -16,7 +16,7 @@ export default function ButtonPage() {
             <Container variant="default">
               <div className="p-6">
                 <h3 className="mb-4 text-lg font-medium">Default</h3>
-                <div className="space-y-3">
+                <div className="flex flex-wrap gap-3">
                   <Button>Default</Button>
                   <Button size="sm">Small</Button>
                   <Button size="lg">Large</Button>
@@ -28,7 +28,7 @@ export default function ButtonPage() {
             <Container variant="default">
               <div className="p-6">
                 <h3 className="mb-4 text-lg font-medium">Secondary</h3>
-                <div className="space-y-3">
+                <div className="flex flex-wrap gap-3">
                   <Button variant="secondary">Secondary</Button>
                   <Button variant="secondary" size="sm">Small</Button>
                   <Button variant="secondary" size="lg">Large</Button>
@@ -40,7 +40,7 @@ export default function ButtonPage() {
             <Container variant="default">
               <div className="p-6">
                 <h3 className="mb-4 text-lg font-medium">Warning</h3>
-                <div className="space-y-3">
+                <div className="flex flex-wrap gap-3">
                   <Button variant="warning">Warning</Button>
                   <Button variant="warning" size="sm">Small</Button>
                   <Button variant="warning" size="lg">Large</Button>
@@ -52,7 +52,7 @@ export default function ButtonPage() {
             <Container variant="default">
               <div className="p-6">
                 <h3 className="mb-4 text-lg font-medium">Success</h3>
-                <div className="space-y-3">
+                <div className="flex flex-wrap gap-3">
                   <Button variant="success">Success</Button>
                   <Button variant="success" size="sm">Small</Button>
                   <Button variant="success" size="lg">Large</Button>
@@ -64,7 +64,7 @@ export default function ButtonPage() {
             <Container variant="default">
               <div className="p-6">
                 <h3 className="mb-4 text-lg font-medium">Destructive</h3>
-                <div className="space-y-3">
+                <div className="flex flex-wrap gap-3">
                   <Button variant="destructive">Destructive</Button>
                   <Button variant="destructive" size="sm">Small</Button>
                   <Button variant="destructive" size="lg">Large</Button>
@@ -76,7 +76,7 @@ export default function ButtonPage() {
             <Container variant="default">
               <div className="p-6">
                 <h3 className="mb-4 text-lg font-medium">Link</h3>
-                <div className="space-y-3">
+                <div className="flex flex-wrap gap-3">
                   <Button variant="link">Link Button</Button>
                   <Button variant="link" size="sm">Small Link</Button>
                   <Button variant="link" size="lg">Large Link</Button>
