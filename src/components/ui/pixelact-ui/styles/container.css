@@ -61,12 +61,6 @@
   pointer-events: none;
 }
 
-/* Container hover effect (optional) */
-.custom-ui-container:hover:not(:disabled) {
-  transform: translateY(-2px);
-  transition: transform 0.2s ease;
-}
-
 /* Container sizes */
 .custom-ui-container.small {
   min-height: 80px;

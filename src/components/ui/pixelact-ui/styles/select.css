@@ -64,18 +64,14 @@
 }
 
 .custom-ui-select-item:hover {
-  border-top-color: var(--select-item-hover-border);
-  border-bottom-color: var(--select-item-hover-border);
   background: var(--select-item-hover-background);
-  color: var(--select-item-hover-text);
-  transform: translateX(2px);
+  color: yellow;
+  cursor: pointer;
 }
 
 .custom-ui-select-item[data-state="checked"] {
-  background: var(--select-item-selected-background);
+  background: transparent;
   color: var(--select-item-selected-text);
-  border-top-color: var(--select-item-selected-border);
-  border-bottom-color: var(--select-item-selected-border);
 }
 
 /* Select Value */
@@ -160,28 +156,40 @@
 }
 
 .custom-ui-select button {
-  background: transparent;
-  border: none;
+  background: transparent !important;
+  border: none !important;
   color: inherit;
   width: 100%;
   padding: 8px 12px;
   font-family: inherit;
-  transition: all 0.2s ease;
+  transition: none !important;
   outline: none !important;
   box-shadow: none !important;
-  ring: none !important;
+  transform: none !important;
+}
+
+.custom-ui-select button:hover {
+  background: transparent !important;
+  border: none !important;
+  outline: none !important;
+  box-shadow: none !important;
+  transform: none !important;
 }
 
 .custom-ui-select button:focus {
+  background: transparent !important;
+  border: none !important;
   outline: none !important;
   box-shadow: none !important;
-  ring: none !important;
+  transform: none !important;
 }
 
 .custom-ui-select button:active {
+  background: transparent !important;
+  border: none !important;
   outline: none !important;
   box-shadow: none !important;
-  ring: none !important;
+  transform: none !important;
 }
 
 .custom-ui-select:hover {

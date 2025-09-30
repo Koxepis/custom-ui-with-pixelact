@@ -147,7 +147,7 @@ export default function SelectPage() {
                   </label>
                   <PixelSelect disabled>
                     <PixelSelectTrigger className="w-full" font="normal">
-                      <PixelSelectValue placeholder="Normal font style" />
+                      <PixelSelectValue placeholder="This is disabled" />
                     </PixelSelectTrigger>
                     <PixelSelectContent>
                       {selectOptions.slice(0, 3).map((option) => (
@@ -220,9 +220,9 @@ export default function SelectPage() {
                     <PixelSelectTrigger
                       className="w-full"
                       variant="custom-ui"
-                      font="pixel"
+                      font="normal"
                     >
-                      <PixelSelectValue placeholder="Pixel gradient vibes" />
+                      <PixelSelectValue placeholder="This is disabled" />
                     </PixelSelectTrigger>
                     <PixelSelectContent variant="custom-ui">
                       {selectOptions.slice(0, 3).map((option) => (
