@@ -1,0 +1,54 @@
+/* Custom UI Progress Bar */
+
+.custom-ui-progress {
+  display: flex;
+  align-items: center;
+  image-rendering: pixelated;
+}
+
+.custom-ui-progress__handle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  image-rendering: pixelated;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100% 100%;
+  height: 20px; /* slightly taller than default track height (16px) */
+  padding: 0 8px; /* room for text on right handle */
+  font-family: "BoldPixels", system-ui, -apple-system, sans-serif;
+  font-size: 12px;
+  line-height: 1;
+}
+
+.custom-ui-progress__handle--left {
+  background-image: url("/assets/bar-left-handle.png");
+}
+
+.custom-ui-progress__handle--right {
+  background-image: url("/assets/bar-right-handle.png");
+  color: #fff;
+}
+
+.custom-ui-progress__track {
+  position: relative;
+  flex: 1 1 auto;
+  min-width: 120px;
+  height: 16px; /* overridden inline via style if needed */
+  background: url("/assets/bar-container.png") no-repeat;
+  background-position: center;
+  background-size: 100% 100%;
+  overflow: hidden;
+}
+
+.custom-ui-progress__fill {
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 0%;
+  background-image: url("/assets/bar-stepper.png");
+  background-repeat: repeat-x;
+  background-size: auto 100%;
+}
+

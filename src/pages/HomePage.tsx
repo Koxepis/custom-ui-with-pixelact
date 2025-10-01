@@ -78,6 +78,16 @@ export default function HomePage() {
                 <Button variant="custom-ui" className="w-full">View Containers</Button>
               </Link>
             </Container>
+
+            <Container variant="default" className="flex flex-col justify-between items-center rounded-lg border bg-card p-8 h-64">
+              <h2 className="text-2xl font-semibold text-white">Progress</h2>
+              <p className="text-white/50">
+                Check out our custom progress bar with handles and stepper fill.
+              </p>
+              <Link to="/progress">
+                <Button variant="custom-ui" className="w-full">View Progress</Button>
+              </Link>
+            </Container>
           </div>
         </div>
       </div>

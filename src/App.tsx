@@ -7,6 +7,7 @@ import ContainerPage from "./pages/ContainerPage";
 import SelectPage from "./pages/SelectPage";
 import CheckboxPage from "./pages/CheckboxPage";
 import ListPage from "./pages/ListPage";
+import ProgressPage from "./pages/ProgressPage";
 
 export default function App() {
   return (
@@ -21,6 +22,7 @@ export default function App() {
           <Route path="/selects" element={<SelectPage />} />
           <Route path="/checkboxes" element={<CheckboxPage />} />
           <Route path="/lists" element={<ListPage />} />
+          <Route path="/progress" element={<ProgressPage />} />
         </Routes>
       </div>
     </Router>
