@@ -20,7 +20,7 @@ export default function CheckboxPage() {
 
         <div className="grid grid-cols-1 gap-8 lg:grid-cols-3">
           {/* Shadcn Checkbox */}
-          <Container variant="default">
+          <Container variant="custom-container-1">
             <div className="p-6 space-y-4">
               <h2 className="text-2xl font-semibold">Shadcn Checkbox</h2>
               <div className="flex items-center space-x-2">
@@ -45,7 +45,7 @@ export default function CheckboxPage() {
           </Container>
 
           {/* Pixelact Checkbox */}
-          <Container variant="golden">
+          <Container variant="custom-container-2">
             <div className="p-6 space-y-4">
               <h2 className="text-2xl font-semibold">Pixelact Checkbox</h2>
               <div className="flex items-center space-x-2">
@@ -70,7 +70,7 @@ export default function CheckboxPage() {
           </Container>
 
           {/* Custom UI (CSS-based) */}
-          <Container variant="grey">
+          <Container variant="custom-container-4">
             <div className="p-6 space-y-4">
               <h2 className="text-2xl font-semibold">Custom UI (CSS-based)</h2>
               <div>
@@ -89,7 +89,7 @@ export default function CheckboxPage() {
           </Container>
 
           {/* Controlled Example (Custom UI CSS-based) */}
-          <Container variant="golden2">
+          <Container variant="custom-container-3">
             <div className="p-6 space-y-4">
               <h2 className="text-2xl font-semibold">Controlled State</h2>
               <div className="space-y-3">

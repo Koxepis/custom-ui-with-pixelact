@@ -46,7 +46,7 @@ export default function SelectPage() {
 
         <div className="grid grid-cols-1 gap-8 lg:grid-cols-2 xl:grid-cols-3">
           {/* Default shadcn Select */}
-          <Container variant="default">
+          <Container variant="custom-container-1">
             <div className="p-6">
               <h2 className="mb-4 text-2xl font-semibold">
                 Default shadcn Select
@@ -101,7 +101,7 @@ export default function SelectPage() {
           </Container>
 
           {/* Pixelact-ui Select */}
-          <Container variant="golden">
+          <Container variant="custom-container-2">
             <div className="p-6">
               <h2 className="mb-4 text-2xl font-semibold">
                 Pixelact-ui Select
@@ -166,7 +166,7 @@ export default function SelectPage() {
           </Container>
 
           {/* Custom UI Alt Variant Select */}
-          <Container variant="golden2">
+          <Container variant="custom-container-3">
             <div className="p-6">
               <h2 className="mb-4 text-2xl font-semibold">
                 Custom UI Alt Variant
@@ -244,7 +244,7 @@ export default function SelectPage() {
 
         {/* Interactive Demo */}
         <div className="mt-8">
-          <Container variant="default" className="w-fit">
+          <Container variant="custom-container-1" className="w-fit">
             <div className="p-6">
               <h2 className="mb-6 text-2xl font-semibold">Interactive Demo</h2>
               <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">

@@ -15,7 +15,7 @@ export default function ButtonPage() {
           <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
             
             {/* Default Button */}
-            <Container variant="default">
+            <Container variant="custom-container-1">
               <div className="p-6">
                 <h3 className="mb-4 text-lg font-medium">Default</h3>
                 <div className="flex flex-wrap gap-3">
@@ -27,7 +27,7 @@ export default function ButtonPage() {
             </Container>
 
             {/* Secondary Button */}
-            <Container variant="default">
+            <Container variant="custom-container-1">
               <div className="p-6">
                 <h3 className="mb-4 text-lg font-medium">Secondary</h3>
                 <div className="flex flex-wrap gap-3">
@@ -39,7 +39,7 @@ export default function ButtonPage() {
             </Container>
 
             {/* Warning Button */}
-            <Container variant="default">
+            <Container variant="custom-container-1">
               <div className="p-6">
                 <h3 className="mb-4 text-lg font-medium">Warning</h3>
                 <div className="flex flex-wrap gap-3">
@@ -51,7 +51,7 @@ export default function ButtonPage() {
             </Container>
 
             {/* Success Button */}
-            <Container variant="default">
+            <Container variant="custom-container-1">
               <div className="p-6">
                 <h3 className="mb-4 text-lg font-medium">Success</h3>
                 <div className="flex flex-wrap gap-3">
@@ -63,7 +63,7 @@ export default function ButtonPage() {
             </Container>
 
             {/* Destructive Button */}
-            <Container variant="default">
+            <Container variant="custom-container-1">
               <div className="p-6">
                 <h3 className="mb-4 text-lg font-medium">Destructive</h3>
                 <div className="flex flex-wrap gap-3">
@@ -75,7 +75,7 @@ export default function ButtonPage() {
             </Container>
 
             {/* Link Button */}
-            <Container variant="default">
+            <Container variant="custom-container-1">
               <div className="p-6">
                 <h3 className="mb-4 text-lg font-medium">Link</h3>
                 <div className="flex flex-wrap gap-3">
@@ -91,7 +91,7 @@ export default function ButtonPage() {
         {/* Custom UI Button Section */}
         <section className="mb-12">
           <h2 className="mb-6 text-2xl font-semibold">Custom UI Buttons</h2>
-          <Container variant="default">
+          <Container variant="custom-container-1">
             <div className="p-6">
               <h3 className="mb-4 text-lg font-medium">Custom UI Button with Background Image</h3>
               <div className="space-y-4">
@@ -113,7 +113,7 @@ export default function ButtonPage() {
         {/* Increment/Decrement Icon Buttons */}
         <section className="mb-12">
           <h2 className="mb-6 text-2xl font-semibold">Increment / Decrement</h2>
-          <Container variant="default">
+          <Container variant="custom-container-1">
             <div className="p-6">
               <h3 className="mb-4 text-lg font-medium">Icon Buttons (Custom UI)</h3>
               <div className="flex items-center gap-4">
@@ -142,7 +142,7 @@ export default function ButtonPage() {
         {/* Interactive Examples */}
         <section className="mb-12">
           <h2 className="mb-6 text-2xl font-semibold">Interactive Examples</h2>
-          <Container variant="default">
+          <Container variant="custom-container-1">
             <div className="p-6">
               <h3 className="mb-4 text-lg font-medium">Button States</h3>
               <div className="space-y-4">

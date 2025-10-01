@@ -14,9 +14,9 @@ export default function HomePage() {
           </p>
 
           <div className="mb-12 grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-4 items-start">
-            <Container variant="default" className="flex flex-col justify-between items-center rounded-lg border bg-card p-8 h-64">
-              <h2 className="text-2xl font-semibold text-white">Buttons</h2>
-              <p className="text-white/50">
+            <Container variant="custom-container-5" className="flex flex-col justify-between items-center rounded-lg border bg-card p-8 h-64">
+              <h2 className="text-2xl font-semibold text-black">Buttons</h2>
+              <p className="text-black/50">
                 Explore our collection of button variants including pixel
                 buttons and custom UI buttons.
               </p>
@@ -25,9 +25,9 @@ export default function HomePage() {
               </Link>
             </Container>
 
-            <Container variant="default" className="flex flex-col justify-between items-center rounded-lg border bg-card p-8 h-64">
-              <h2 className="text-2xl font-semibold text-white">Inputs</h2>
-              <p className="text-white/50">
+            <Container variant="custom-container-5" className="flex flex-col justify-between items-center rounded-lg border bg-card p-8 h-64">
+              <h2 className="text-2xl font-semibold text-black">Inputs</h2>
+              <p className="text-black/50">
                 Check out our input components with both shadcn and pixel
                 styling options.
               </p>
@@ -36,9 +36,9 @@ export default function HomePage() {
               </Link>
             </Container>
 
-            <Container variant="default" className="flex flex-col justify-between items-center rounded-lg border bg-card p-8 h-64">
-              <h2 className="text-2xl font-semibold text-white">Selects</h2>
-              <p className="text-white/50">
+            <Container variant="custom-container-5" className="flex flex-col justify-between items-center rounded-lg border bg-card p-8 h-64">
+              <h2 className="text-2xl font-semibold text-black">Selects</h2>
+              <p className="text-black/50">
                 Compare default shadcn select with custom pixelact-ui select
                 components.
               </p>
@@ -47,9 +47,9 @@ export default function HomePage() {
               </Link>
             </Container>
 
-            <Container variant="default" className="flex flex-col justify-between items-center rounded-lg border bg-card p-8 h-64">
-              <h2 className="text-2xl font-semibold text-white">Checkboxes</h2>
-              <p className="text-white/50">
+            <Container variant="custom-container-5" className="flex flex-col justify-between items-center rounded-lg border bg-card p-8 h-64">
+              <h2 className="text-2xl font-semibold text-black">Checkboxes</h2>
+              <p className="text-black/50">
                 Compare shadcn checkbox with pixelact-ui styled checkbox.
               </p>
               <Link to="/checkboxes">
@@ -57,9 +57,9 @@ export default function HomePage() {
               </Link>
             </Container>
 
-            <Container variant="default" className="flex flex-col justify-between items-center rounded-lg border bg-card p-8 h-64">
-              <h2 className="text-2xl font-semibold text-white">Lists</h2>
-              <p className="text-white/50">
+            <Container variant="custom-container-5" className="flex flex-col justify-between items-center rounded-lg border bg-card p-8 h-64">
+              <h2 className="text-2xl font-semibold text-black">Lists</h2>
+              <p className="text-black/50">
                 Explore our custom-ui list component with RPG-inspired styling
                 and keyboard support.
               </p>
@@ -68,9 +68,9 @@ export default function HomePage() {
               </Link>
             </Container>
 
-            <Container variant="default" className="flex flex-col justify-between items-center rounded-lg border bg-card p-8 h-64">
-              <h2 className="text-2xl font-semibold text-white">Containers</h2>
-              <p className="text-white/50">
+            <Container variant="custom-container-5" className="flex flex-col justify-between items-center rounded-lg border bg-card p-8 h-64">
+              <h2 className="text-2xl font-semibold text-black">Containers</h2>
+              <p className="text-black/50">
                 Discover our custom container components with RPG-inspired
                 aesthetics.
               </p>
@@ -79,9 +79,9 @@ export default function HomePage() {
               </Link>
             </Container>
 
-            <Container variant="default" className="flex flex-col justify-between items-center rounded-lg border bg-card p-8 h-64">
-              <h2 className="text-2xl font-semibold text-white">Progress</h2>
-              <p className="text-white/50">
+            <Container variant="custom-container-5" className="flex flex-col justify-between items-center rounded-lg border bg-card p-8 h-64">
+              <h2 className="text-2xl font-semibold text-black">Progress</h2>
+              <p className="text-black/50">
                 Check out our custom progress bar with handles and stepper fill.
               </p>
               <Link to="/progress">

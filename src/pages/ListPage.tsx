@@ -30,7 +30,7 @@ export default function ListPage() {
 
         <div className="grid grid-cols-1 gap-8 lg:grid-cols-3">
           {/* Basic List */}
-          <Container variant="default">
+          <Container variant="custom-container-1">
             <div className="p-6 space-y-4">
               <h2 className="text-2xl font-semibold">Basic List</h2>
               <p className="text-muted-foreground">
@@ -41,7 +41,7 @@ export default function ListPage() {
           </Container>
 
           {/* Scrollable List */}
-          <Container variant="golden">
+          <Container variant="custom-container-2">
             <div className="p-6 space-y-4">
               <h2 className="text-2xl font-semibold">Scrollable List</h2>
               <p className="text-muted-foreground">
@@ -52,7 +52,7 @@ export default function ListPage() {
           </Container>
 
           {/* Controlled List */}
-          <Container variant="golden2">
+          <Container variant="custom-container-3">
             <div className="p-6 space-y-4">
               <h2 className="text-2xl font-semibold">Controlled Selection</h2>
               <p className="text-muted-foreground">
@@ -84,7 +84,7 @@ export default function ListPage() {
 
         {/* Disabled Example */}
         <div className="mt-8">
-          <Container variant="grey">
+          <Container variant="custom-container-4">
             <div className="p-6 space-y-4">
               <h2 className="text-2xl font-semibold">Disabled</h2>
               <p className="text-muted-foreground">List with disabled interactions and grayscale.</p>

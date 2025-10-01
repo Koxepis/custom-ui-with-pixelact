@@ -27,7 +27,7 @@ export default function InputPage() {
           <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
             
             {/* Basic Input */}
-            <Container variant="default">
+            <Container variant="custom-container-1">
               <div className="p-6">
                 <h3 className="mb-4 text-lg font-medium">Basic Input</h3>
                 <div className="space-y-3">
@@ -39,7 +39,7 @@ export default function InputPage() {
             </Container>
 
             {/* Input States */}
-            <Container variant="default">
+            <Container variant="custom-container-1">
               <div className="p-6">
                 <h3 className="mb-4 text-lg font-medium">Input States</h3>
                 <div className="space-y-3">
@@ -51,7 +51,7 @@ export default function InputPage() {
             </Container>
 
             {/* Input Sizes */}
-            <Container variant="default">
+            <Container variant="custom-container-1">
               <div className="p-6">
                 <h3 className="mb-4 text-lg font-medium">Input Sizes</h3>
                 <div className="space-y-3">
@@ -63,7 +63,7 @@ export default function InputPage() {
             </Container>
 
             {/* Input Variants */}
-            <Container variant="default">
+            <Container variant="custom-container-1">
               <div className="p-6">
                 <h3 className="mb-4 text-lg font-medium">Input Variants</h3>
                 <div className="space-y-3">
@@ -82,7 +82,7 @@ export default function InputPage() {
           <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
             
             {/* Basic Pixel Input */}
-            <Container variant="golden">
+            <Container variant="custom-container-2">
               <div className="p-6">
                 <h3 className="mb-4 text-lg font-medium">Basic Pixel Input</h3>
                 <div className="space-y-3">
@@ -94,7 +94,7 @@ export default function InputPage() {
             </Container>
 
             {/* Pixel Input States */}
-            <Container variant="golden">
+            <Container variant="custom-container-2">
               <div className="p-6">
                 <h3 className="mb-4 text-lg font-medium">Pixel Input States</h3>
                 <div className="space-y-3">
@@ -106,7 +106,7 @@ export default function InputPage() {
             </Container>
 
             {/* Pixel Input Sizes */}
-            <Container variant="golden">
+            <Container variant="custom-container-2">
               <div className="p-6">
                 <h3 className="mb-4 text-lg font-medium">Pixel Input Sizes</h3>
                 <div className="space-y-3">
@@ -118,7 +118,7 @@ export default function InputPage() {
             </Container>
 
             {/* Pixel Input Widths */}
-            <Container variant="golden">
+            <Container variant="custom-container-2">
               <div className="p-6">
                 <h3 className="mb-4 text-lg font-medium">Pixel Input Widths</h3>
                 <div className="space-y-3">
@@ -137,7 +137,7 @@ export default function InputPage() {
           <div className="grid grid-cols-1 gap-6 lg:grid-cols-2">
             
             {/* Shadcn Form */}
-            <Container variant="default">
+            <Container variant="custom-container-1">
               <div className="p-6">
                 <h3 className="mb-4 text-lg font-medium">Shadcn Form</h3>
                 <form className="space-y-4">
@@ -158,7 +158,7 @@ export default function InputPage() {
             </Container>
 
             {/* Pixel Form */}
-            <Container variant="golden">
+            <Container variant="custom-container-2">
               <div className="p-6">
                 <h3 className="mb-4 text-lg font-medium">Pixel Form</h3>
                 <form className="space-y-4">
@@ -186,7 +186,7 @@ export default function InputPage() {
           <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
             
             {/* Basic Custom UI Input */}
-            <Container variant="golden2">
+            <Container variant="custom-container-3">
               <div className="p-6">
                 <h3 className="mb-4 text-lg font-medium">Basic Custom UI Input</h3>
                 <div className="space-y-3">
@@ -198,7 +198,7 @@ export default function InputPage() {
             </Container>
 
             {/* Custom UI Input States */}
-            <Container variant="golden2">
+            <Container variant="custom-container-3">
               <div className="p-6">
                 <h3 className="mb-4 text-lg font-medium">Custom UI Input States</h3>
                 <div className="space-y-3">
@@ -210,7 +210,7 @@ export default function InputPage() {
             </Container>
 
             {/* Custom UI Textarea */}
-            <Container variant="golden2">
+            <Container variant="custom-container-3">
               <div className="p-6">
                 <h3 className="mb-4 text-lg font-medium">Custom UI Textarea</h3>
                 <div className="space-y-3">
@@ -222,7 +222,7 @@ export default function InputPage() {
             </Container>
 
             {/* Custom UI Input Sizes */}
-            <Container variant="golden2">
+            <Container variant="custom-container-3">
               <div className="p-6">
                 <h3 className="mb-4 text-lg font-medium">Custom UI Input Sizes</h3>
                 <div className="space-y-3">
@@ -238,7 +238,7 @@ export default function InputPage() {
         {/* Interactive Examples */}
         <section className="mb-12">
           <h2 className="mb-6 text-2xl font-semibold">Interactive Examples</h2>
-          <Container variant="golden">
+          <Container variant="custom-container-2">
             <div className="p-6">
             <h3 className="mb-4 text-lg font-medium">Focus States & Validation</h3>
             <div className="grid grid-cols-1 gap-6 md:grid-cols-3">
@@ -318,7 +318,7 @@ export default function InputPage() {
         {/* Custom UI Form Example */}
         <section className="mb-12">
           <h2 className="mb-6 text-2xl font-semibold">Custom UI Form Example</h2>
-          <Container variant="golden2">
+          <Container variant="custom-container-3">
             <div className="p-6">
             <h3 className="mb-4 text-lg font-medium">Complete Custom UI Form</h3>
             <form className="space-y-4">

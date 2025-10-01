@@ -1,132 +1,101 @@
-/* Custom UI Container Styles */
+/*
+  Custom UI Container Styles
+  --------------------------
+  Base styles + variants (custom-container-1..n)
+*/
+
+/* Base */
 .custom-ui-container {
-  /* Reset default styling */
   margin: 0;
   padding: 0;
-  border: none;
+  border: 16px solid transparent;
   background: none;
   position: relative;
   image-rendering: pixelated;
-  /* Default text color inside containers */
-  color: #ffffff;
-  
-  /* Container sizing */
   box-sizing: border-box;
-  
-  /* Border image for the frame */
-  border: 16px solid transparent;
-  border-image: url("/assets/container/border-image.png") 16 round;
-  
-  /* Background image for the content area */
-  background: url("/assets/container/background-image.png") repeat;
-  
-  /* Padding for content */
-  /* padding: 16px; */
+  color: #ffffff; /* default text color inside containers */
+  border-radius: 16px;
+  overflow: hidden;
 }
 
-/* Golden variant */
+/* Variants (using existing asset paths; rename/move assets later if needed) */
+.custom-ui-container.custom-container-1,
+.custom-ui-container.default {
+  border-image: url("/assets/border-image-custom-1.png") 16 round;
+  background: url("/assets/background-image-custom-1.png") repeat;
+}
+
+.custom-ui-container.custom-container-2,
 .custom-ui-container.golden {
-  border-image: url("/assets/container/border-image-golden.png") 16 round;
-  background: url("/assets/container/background-image-golden.png") repeat;
+  border-image: url("/assets/border-image-custom-2.png") 16 round;
+  background: url("/assets/background-image-custom-2.png") repeat;
 }
 
-/* Golden2 variant */
+.custom-ui-container.custom-container-3,
 .custom-ui-container.golden2 {
-  border-image: url("/assets/container/border-image-golden2.png") 16 round;
-  background: url("/assets/container/background-image-golden2.png") repeat;
+  border-image: url("/assets/border-image-custom-3.png") 16 round;
+  background: url("/assets/background-image-custom-3.png") repeat;
 }
 
-/* Grey variant */
+.custom-ui-container.custom-container-4,
 .custom-ui-container.grey {
-  border-image: url("/assets/container/border-image-grey.png") 16 round;
-  background: url("/assets/container/background-image-grey.png") repeat;
+  border-image: url("/assets/border-image-custom-4.png") 16 round;
+  background: url("/assets/background-image-custom-4.png") repeat;
 }
 
-/* Container content area */
+/* New variant: custom-container-5 */
+.custom-ui-container.custom-container-5 {
+  border-image: url("/assets/border-image-custom-5.png") 16 round;
+  background: url("/assets/background-image-custom-5.png") repeat;
+}
+
+/* Disabled */
+.custom-ui-container:disabled,
+.custom-ui-container.disabled {
+  filter: grayscale(100%);
+  opacity: 0.6;
+  pointer-events: none;
+}
+
+/* Sizes removed — use dynamic classes for layout; frame uses default slice */
+
+/* Scrollable modifier (used via className) */
+.custom-ui-container.scrollable {
+  max-height: 400px;
+  overflow-y: auto;
+}
+.custom-ui-container.scrollable::-webkit-scrollbar { width: 18px; }
+.custom-ui-container.scrollable::-webkit-scrollbar-track {
+  background-image: url('/assets/scrollbar-track.png');
+  background-size: 18px 60px;
+  background-repeat: repeat-y;
+}
+.custom-ui-container.scrollable::-webkit-scrollbar-thumb {
+  background-image: url('/assets/scrollbar-thumb.png');
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+}
+.custom-ui-container.scrollable::-webkit-scrollbar-button {
+  background-image: url('/assets/scrollbar-button.png');
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+}
+
+/* Optional content block hook */
 .custom-ui-container-content {
   width: fit-content;
   display: block;
   box-sizing: border-box;
 }
 
-/* Container disabled state */
-.custom-ui-container:disabled {
-  filter: grayscale(100%);
-  opacity: 0.6;
-  pointer-events: none;
-}
-
-/* Container sizes */
-.custom-ui-container.small {
-  border-width: 12px;
-  border-image: url("/assets/container/border-image.png") 12 round;
-  /* padding: 12px; */
-}
-
-.custom-ui-container.small.golden {
-  border-image: url("/assets/container/border-image-golden.png") 12 round;
-}
-
-.custom-ui-container.small.golden2 {
-  border-image: url("/assets/container/border-image-golden2.png") 12 round;
-}
-
-.custom-ui-container.small.grey {
-  border-image: url("/assets/container/border-image-grey.png") 12 round;
-}
-
-.custom-ui-container.large {
-  border-width: 20px;
-  border-image: url("/assets/container/border-image.png") 20 round;
-  /* padding: 20px; */
-}
-
-.custom-ui-container.large.golden {
-  border-image: url("/assets/container/border-image-golden.png") 20 round;
-}
-
-.custom-ui-container.large.golden2 {
-  border-image: url("/assets/container/border-image-golden2.png") 20 round;
-}
-
-.custom-ui-container.large.grey {
-  border-image: url("/assets/container/border-image-grey.png") 20 round;
-}
-
-/* Container with fixed dimensions */
-.custom-ui-container.fixed-width {
-  width: 400px;
-}
-
-.custom-ui-container.fixed-height {
-  min-height: 300px;
-  height: 300px;
-}
-
-/* Container with scrollable content */
-.custom-ui-container.scrollable {
-  max-height: 400px;
-  overflow-y: auto;
-}
-
-.custom-ui-container.scrollable::-webkit-scrollbar {
-  width: 18px;
-}
-
-.custom-ui-container.scrollable::-webkit-scrollbar-track {
-  background-image: url('/assets/scrollbar-track.png');
-  background-size: 18px 60px;
-  background-repeat: repeat-y;
-}
-
-.custom-ui-container.scrollable::-webkit-scrollbar-thumb {
-  background-image: url('/assets/scrollbar-thumb.png');
-  background-size: 100% 100%;
-  background-repeat: no-repeat;
-}
-
-.custom-ui-container.scrollable::-webkit-scrollbar-button {
-  background-image: url('/assets/scrollbar-button.png');
-  background-size: 100% 100%;
-  background-repeat: no-repeat;
+/* Typography overrides for custom-container-5 */
+.custom-ui-container.custom-container-5 h1,
+.custom-ui-container.custom-container-5 h2,
+.custom-ui-container.custom-container-5 h3,
+.custom-ui-container.custom-container-5 h4,
+.custom-ui-container.custom-container-5 h5,
+.custom-ui-container.custom-container-5 p,
+.custom-ui-container.custom-container-5 span,
+.custom-ui-container.custom-container-5 label{
+  color: hsl(0 0% 0%);
 }

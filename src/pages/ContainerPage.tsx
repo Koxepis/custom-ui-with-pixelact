@@ -8,6 +8,7 @@ export default function ContainerPage() {
   const [goldenOn, setGoldenOn] = useState(false);
   const [golden2On, setGolden2On] = useState(false);
   const [greyOn, setGreyOn] = useState(false);
+  const [custom5On, setCustom5On] = useState(false);
   return (
     <div className="min-h-screen bg-background p-8">
       <div className="mx-auto max-w-6xl">
@@ -20,8 +21,8 @@ export default function ContainerPage() {
             
             {/* Default Container */}
             <div>
-              <h3 className="mb-4 text-lg font-medium">Default</h3>
-              <Container variant="default" className="p-4 space-y-2">
+              <h3 className="mb-4 text-lg font-medium">Custom 1</h3>
+              <Container variant="custom-container-1" className="p-4 space-y-2">
                 <p className="text-white text-sm">Default container with standard border and background.</p>
                 <Button variant="custom-ui" size="sm" className="mt-1"
                   onClick={() => setDefaultOn((v) => !v)}>
@@ -33,8 +34,8 @@ export default function ContainerPage() {
 
             {/* Golden Container */}
             <div>
-              <h3 className="mb-4 text-lg font-medium">Golden</h3>
-              <Container variant="golden" className="p-4 space-y-2">
+              <h3 className="mb-4 text-lg font-medium">Custom 2</h3>
+              <Container variant="custom-container-2" className="p-4 space-y-2">
                 <p className="text-white text-sm">Golden container with luxurious appearance.</p>
                 <Button variant="custom-ui" size="sm" className="mt-1"
                   onClick={() => setGoldenOn((v) => !v)}>
@@ -46,8 +47,8 @@ export default function ContainerPage() {
 
             {/* Golden2 Container */}
             <div>
-              <h3 className="mb-4 text-lg font-medium">Golden 2</h3>
-              <Container variant="golden2" className="p-4 space-y-2">
+              <h3 className="mb-4 text-lg font-medium">Custom 3</h3>
+              <Container variant="custom-container-3" className="p-4 space-y-2">
                 <p className="text-white text-sm">Alternative golden container design.</p>
                 <Button variant="custom-ui" size="sm" className="mt-1"
                   onClick={() => setGolden2On((v) => !v)}>
@@ -59,14 +60,27 @@ export default function ContainerPage() {
 
             {/* Grey Container */}
             <div>
-              <h3 className="mb-4 text-lg font-medium">Grey</h3>
-              <Container variant="grey" className="p-4 space-y-2">
+              <h3 className="mb-4 text-lg font-medium">Custom 4</h3>
+              <Container variant="custom-container-4" className="p-4 space-y-2">
                 <p className="text-white text-sm">Grey container for subtle appearance.</p>
                 <Button variant="custom-ui" size="sm" className="mt-1"
                   onClick={() => setGreyOn((v) => !v)}>
                   Toggle
                 </Button>
                 <p className="text-xs text-white/80">Status: {greyOn ? <span className="text-green-400">On</span> : <span className="text-red-400">Off</span>}</p>
+              </Container>
+            </div>
+
+            {/* Custom 5 Container */}
+            <div>
+              <h3 className="mb-4 text-lg font-medium">Custom 5</h3>
+              <Container variant="custom-container-5" className="p-4 space-y-2">
+                <p className="text-white text-sm">New variant backed by custom-5 assets.</p>
+                <Button variant="custom-ui" size="sm" className="mt-1"
+                  onClick={() => setCustom5On((v) => !v)}>
+                  Toggle
+                </Button>
+                <p className="text-xs text-white/80">Status: {custom5On ? <span className="!text-green-400">On</span> : <span className="!text-red-400">Off</span>}</p>
               </Container>
             </div>
           </div>
@@ -80,7 +94,7 @@ export default function ContainerPage() {
             {/* Small Container */}
             <div>
               <h3 className="mb-4 text-lg font-medium">Small</h3>
-              <Container variant="golden">
+              <Container variant="custom-container-2">
                 <p className="text-white text-sm">Small container with reduced padding and border.</p>
               </Container>
             </div>
@@ -88,7 +102,7 @@ export default function ContainerPage() {
             {/* Default Container */}
             <div>
               <h3 className="mb-4 text-lg font-medium">Default</h3>
-              <Container variant="golden">
+              <Container variant="custom-container-2">
                 <p className="text-white text-sm">Default container size with standard padding and border.</p>
               </Container>
             </div>
@@ -96,7 +110,7 @@ export default function ContainerPage() {
             {/* Large Container */}
             <div>
               <h3 className="mb-4 text-lg font-medium">Large</h3>
-              <Container variant="golden">
+              <Container variant="custom-container-2">
                 <p className="text-white text-sm">Large container with increased padding and border.</p>
               </Container>
             </div>
@@ -111,7 +125,7 @@ export default function ContainerPage() {
             {/* Fixed Width Container */}
             <div>
               <h3 className="mb-4 text-lg font-medium">Fixed Width</h3>
-              <Container variant="default" layout="fixedWidth">
+              <Container variant="custom-container-1" className="w-[400px]">
                 <p className="text-white text-sm">Container with fixed width of 400px.</p>
                 <div className="mt-4 space-y-2">
                   <PixelInput variant="custom-ui" placeholder="Input field" className="w-full" />
@@ -123,7 +137,7 @@ export default function ContainerPage() {
             {/* Fixed Height Container */}
             <div>
               <h3 className="mb-4 text-lg font-medium">Fixed Height</h3>
-              <Container variant="golden" layout="fixedHeight">
+              <Container variant="custom-container-2" className="min-h-[300px] h-[300px]">
                 <p className="text-white text-sm">Container with fixed height of 300px.</p>
                 <div className="mt-4 space-y-2">
                   <p className="text-white text-xs">This container has a fixed height and will maintain it regardless of content.</p>
@@ -138,7 +152,7 @@ export default function ContainerPage() {
         <section className="mb-12">
           <h2 className="mb-6 text-2xl font-semibold">Scrollable Container</h2>
           <div className="max-w-2xl">
-            <Container variant="grey" layout="scrollable" className="p-4">
+            <Container variant="custom-container-4" className="p-4 max-h-[400px] overflow-y-auto scrollable">
               <h4 className="text-white text-lg font-medium mb-4">Scrollable Content</h4>
               <div className="space-y-3">
                 <p className="text-white text-sm">This container has a maximum height and will show a scrollbar when content overflows.</p>
@@ -160,7 +174,7 @@ export default function ContainerPage() {
             {/* Form Container */}
             <div>
               <h3 className="mb-4 text-lg font-medium">Contact Form</h3>
-              <Container variant="golden">
+              <Container variant="custom-container-2">
                 <h4 className="text-white text-lg font-medium mb-4">Contact Us</h4>
                 <div className="space-y-4">
                   <div>
@@ -183,7 +197,7 @@ export default function ContainerPage() {
             {/* Info Container */}
             <div>
               <h3 className="mb-4 text-lg font-medium">Information Panel</h3>
-              <Container variant="default">
+              <Container variant="custom-container-1">
                 <h4 className="text-white text-lg font-medium mb-4">System Status</h4>
                 <div className="space-y-3">
                   <div className="flex justify-between items-center">
@@ -217,7 +231,7 @@ export default function ContainerPage() {
             {/* Normal Container */}
             <div>
               <h3 className="mb-4 text-lg font-medium">Normal State</h3>
-              <Container variant="golden">
+              <Container variant="custom-container-2">
                 <p className="text-white text-sm">This container is in its normal state and fully interactive.</p>
                 <Button variant="custom-ui" size="sm" className="mt-4">Interactive Button</Button>
               </Container>
@@ -226,7 +240,7 @@ export default function ContainerPage() {
             {/* Disabled Container */}
             <div>
               <h3 className="mb-4 text-lg font-medium">Disabled State (Grayscale)</h3>
-              <Container variant="golden" disabled>
+              <Container variant="custom-container-2" disabled>
                 <p className="text-white text-sm">This container is disabled with grayscale filter applied.</p>
                 <Button variant="custom-ui" size="sm" className="mt-4" disabled>Disabled Button</Button>
               </Container>
@@ -238,7 +252,7 @@ export default function ContainerPage() {
         <section className="mb-12">
           <h2 className="mb-6 text-2xl font-semibold">Complex Container Example</h2>
           <div className="max-w-4xl">
-            <Container variant="golden2">
+              <Container variant="custom-container-5">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div>
                   <h4 className="text-white text-lg font-medium mb-4">User Profile</h4>

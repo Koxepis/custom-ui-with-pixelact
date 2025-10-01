@@ -23,7 +23,7 @@ export default function ProgressPage() {
         {/* Simple Progress Bar */}
         <section className="mb-12">
           <h2 className="mb-6 text-2xl font-semibold">Simple Progress Bar</h2>
-          <Container variant="default">
+          <Container variant="custom-container-1">
             <div className="p-6">
               <h3 className="mb-4 text-lg font-medium">Static Example</h3>
               <div className="flex items-center">
@@ -36,7 +36,7 @@ export default function ProgressPage() {
         {/* Interactive Progress */}
         <section className="mb-12">
           <h2 className="mb-6 text-2xl font-semibold">Interactive</h2>
-          <Container variant="default">
+          <Container variant="custom-container-1">
             <div className="p-6">
               <h3 className="mb-4 text-lg font-medium">Control with Icon Buttons</h3>
               <div className="flex items-center gap-4">
@@ -63,7 +63,7 @@ export default function ProgressPage() {
         {/* Disabled */}
         <section className="mb-12">
           <h2 className="mb-6 text-2xl font-semibold">Disabled</h2>
-          <Container variant="default">
+          <Container variant="custom-container-1">
             <div className="p-6 space-y-4">
               <h3 className="text-lg font-medium">Disabled Examples</h3>
               <div className="flex items-center">

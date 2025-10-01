@@ -7,40 +7,51 @@ import "@/components/ui/pixelact-ui/styles/container.css";
 const containerVariants = cva("custom-ui-container", {
   variants: {
     variant: {
-      default: "",
-      golden: "golden",
-      golden2: "golden2",
-      grey: "grey",
-    },
-    layout: {
-      default: "",
-      fixedWidth: "fixed-width",
-      fixedHeight: "fixed-height",
-      scrollable: "scrollable",
+      "custom-container-1": "custom-container-1",
+      "custom-container-2": "custom-container-2",
+      "custom-container-3": "custom-container-3",
+      "custom-container-4": "custom-container-4",
+      "custom-container-5": "custom-container-5",
     },
   },
   defaultVariants: {
-    variant: "default",
-    layout: "default",
+    variant: "custom-container-1",
   },
 });
 
 export interface ContainerProps
   extends React.HTMLAttributes<HTMLDivElement>,
-    Omit<VariantProps<typeof containerVariants>, 'size'> {
+    Omit<VariantProps<typeof containerVariants>, "size" | "layout"> {
   disabled?: boolean;
   className?: string;
   children?: React.ReactNode;
 }
 
 const Container = React.forwardRef<HTMLDivElement, ContainerProps>(
-  ({ className, variant, layout, disabled, children, style, ...props }, ref) => {
+  ({ className, variant, disabled, children, style, ...props }, ref) => {
+    // Map old variant names to the new naming scheme for backward compatibility
+    const normalizedVariant = ((): VariantProps<
+      typeof containerVariants
+    >["variant"] => {
+      switch (variant as any) {
+        case "default":
+          return "custom-container-1";
+        case "golden":
+          return "custom-container-2";
+        case "golden2":
+          return "custom-container-3";
+        case "grey":
+          return "custom-container-4";
+        default:
+          return (variant as any) ?? "custom-container-1";
+      }
+    })();
     return (
       <div
         className={cn(
-          containerVariants({ variant, layout }),
+          containerVariants({ variant: normalizedVariant }),
           disabled && "disabled",
-          className
+          className,
         )}
         style={style}
         ref={ref}
@@ -49,7 +60,7 @@ const Container = React.forwardRef<HTMLDivElement, ContainerProps>(
         {children}
       </div>
     );
-  }
+  },
 );
 Container.displayName = "Container";
 
