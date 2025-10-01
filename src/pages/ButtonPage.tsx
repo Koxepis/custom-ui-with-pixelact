@@ -1,7 +1,9 @@
 import { Button } from "../components/ui/pixelact-ui/button";
 import { Container } from "@/components/ui/pixelact-ui/container";
+import * as React from "react";
 
 export default function ButtonPage() {
+  const [count, setCount] = React.useState(0);
   return (
     <div className="min-h-screen bg-background p-8">
       <div className="mx-auto max-w-4xl">
@@ -103,6 +105,35 @@ export default function ButtonPage() {
                   <Button variant="custom-ui" className="min-w-64">Medium Length Button Text</Button>
                   <Button variant="custom-ui" className="min-w-80">Very Long Button Text Example</Button>
                 </div>
+              </div>
+            </div>
+          </Container>
+        </section>
+
+        {/* Increment/Decrement Icon Buttons */}
+        <section className="mb-12">
+          <h2 className="mb-6 text-2xl font-semibold">Increment / Decrement</h2>
+          <Container variant="default">
+            <div className="p-6">
+              <h3 className="mb-4 text-lg font-medium">Icon Buttons (Custom UI)</h3>
+              <div className="flex items-center gap-4">
+                <Button
+                  aria-label="Decrement"
+                  title="Decrement"
+                  variant="custom-ui-decrement"
+                  onClick={() => setCount((c) => c - 1)}
+                />
+                <span className="min-w-10 text-center text-xl font-bold">{count}</span>
+                <Button
+                  aria-label="Increment"
+                  title="Increment"
+                  variant="custom-ui-increment"
+                  onClick={() => setCount((c) => c + 1)}
+                />
+              </div>
+              <div className="mt-6 flex items-center gap-4">
+                <Button aria-label="Decrement (disabled)" variant="custom-ui-decrement" disabled />
+                <Button aria-label="Increment (disabled)" variant="custom-ui-increment" disabled />
               </div>
             </div>
           </Container>

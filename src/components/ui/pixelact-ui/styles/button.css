@@ -220,3 +220,74 @@
 .custom-ui-button:disabled:active {
   background-image: url("/assets/button/button.png");
 }
+
+/* Increment/Decrement icon buttons (use assets under public/assets) */
+.custom-ui-button-increment,
+.custom-ui-button-decrement {
+  image-rendering: pixelated;
+  background-repeat: no-repeat;
+  background-clip: padding-box;
+  background-origin: padding-box;
+  background-position: center;
+  background-size: 100% 100%;
+  border: none;
+  outline: none;
+  overflow: visible;
+  box-shadow: none; /* override pixel__button box-shadow */
+
+  /* ensure no inherited transforms or translations */
+  transform: none;
+
+  /* icon-like sizing (adjust if needed) */
+  display: inline-block;
+  width: 32px;
+  height: 32px;
+  min-width: 32px;
+  min-height: 32px;
+  padding: 0;
+}
+
+/* increment states */
+.custom-ui-button-increment {
+  background-image: url("/assets/increment-normal.png");
+}
+.custom-ui-button-increment.hover,
+.custom-ui-button-increment:hover {
+  background-image: url("/assets/increment-hovered.png");
+}
+.custom-ui-button-increment.down,
+.custom-ui-button-increment:active {
+  background-image: url("/assets/increment-clicked.png");
+  transform: none; /* override pixel__button active translate */
+}
+
+/* decrement states */
+.custom-ui-button-decrement {
+  background-image: url("/assets/decrement-normal.png");
+}
+.custom-ui-button-decrement.hover,
+.custom-ui-button-decrement:hover {
+  background-image: url("/assets/decrement-hovered.png");
+}
+.custom-ui-button-decrement.down,
+.custom-ui-button-decrement:active {
+  background-image: url("/assets/decrement-clicked.png");
+  transform: none; /* override pixel__button active translate */
+}
+
+/* disabled icon buttons: grayscale and fixed to normal image */
+.custom-ui-button-increment:disabled,
+.custom-ui-button-decrement:disabled {
+  filter: grayscale(100%);
+  opacity: 0.6;
+  cursor: not-allowed;
+  pointer-events: none;
+}
+.custom-ui-button-increment:disabled:hover,
+.custom-ui-button-increment:disabled:active {
+  background-image: url("/assets/increment-normal.png");
+}
+.custom-ui-button-decrement:disabled:hover,
+.custom-ui-button-decrement:disabled:active {
+  background-image: url("/assets/decrement-normal.png");
+}
