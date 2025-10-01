@@ -7,6 +7,8 @@
   background: none;
   position: relative;
   image-rendering: pixelated;
+  /* Default text color inside containers */
+  color: #ffffff;
   
   /* Container sizing */
   box-sizing: border-box;

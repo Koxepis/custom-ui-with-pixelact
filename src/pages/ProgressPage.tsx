@@ -59,8 +59,27 @@ export default function ProgressPage() {
             </div>
           </Container>
         </section>
+
+        {/* Disabled */}
+        <section className="mb-12">
+          <h2 className="mb-6 text-2xl font-semibold">Disabled</h2>
+          <Container variant="default">
+            <div className="p-6 space-y-4">
+              <h3 className="text-lg font-medium">Disabled Examples</h3>
+              <div className="flex items-center">
+                <Progress value={40} label={"8/20"} disabled />
+              </div>
+              <div className="flex items-center gap-4">
+                <Button aria-label="Decrement" variant="custom-ui-decrement" disabled />
+                <div className="flex-1">
+                  <Progress value={1} label={`${10}/${2000}`} disabled />
+                </div>
+                <Button aria-label="Increment" variant="custom-ui-increment" disabled />
+              </div>
+            </div>
+          </Container>
+        </section>
       </div>
     </div>
   );
 }
-

@@ -6,6 +6,14 @@
   image-rendering: pixelated;
 }
 
+/* Disabled visual state */
+.custom-ui-progress.is-disabled,
+.custom-ui-progress[aria-disabled="true"] {
+  filter: grayscale(100%);
+  opacity: 0.6;
+  pointer-events: none;
+}
+
 .custom-ui-progress__handle {
   display: inline-flex;
   align-items: center;
@@ -44,11 +52,11 @@
 .custom-ui-progress__fill {
   position: absolute;
   left: 0;
-  top: 0;
-  bottom: 0;
+  /* 2px shorter than track, centered via 1px inset top/bottom */
+  top: 1px;
+  bottom: 1px;
   width: 0%;
   background-image: url("/assets/bar-stepper.png");
   background-repeat: repeat-x;
   background-size: auto 100%;
 }
-

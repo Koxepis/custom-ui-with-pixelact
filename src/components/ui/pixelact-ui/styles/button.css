@@ -175,6 +175,7 @@
   overflow: visible;
   outline: none;
   box-shadow: none; /* Override pixel__button box-shadow */
+  color: initial; /* do not inherit container text color */
 
   /* background */
   background: url("/assets/button/button.png") no-repeat;
@@ -225,6 +226,7 @@
 .custom-ui-button-increment,
 .custom-ui-button-decrement {
   image-rendering: pixelated;
+  color: initial; /* no inherited text color (defensive) */
   background-repeat: no-repeat;
   background-clip: padding-box;
   background-origin: padding-box;
