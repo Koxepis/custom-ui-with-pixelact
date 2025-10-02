@@ -40,21 +40,11 @@ export default function ProgressPage() {
             <div className="p-6">
               <h3 className="mb-4 text-lg font-medium">Control with Icon Buttons</h3>
               <div className="flex items-center gap-4">
-                <Button
-                  aria-label="Decrement"
-                  title="Decrement"
-                  variant="custom-ui-decrement"
-                  onClick={dec}
-                />
+                <Button aria-label="Decrement" title="Decrement" variant="custom-ui-decrement" onClick={dec} />
                 <div className="flex-1">
                   <Progress value={clamped} label={`${currentStep}/${stepsTotal}`} />
                 </div>
-                <Button
-                  aria-label="Increment"
-                  title="Increment"
-                  variant="custom-ui-increment"
-                  onClick={inc}
-                />
+                <Button aria-label="Increment" title="Increment" variant="custom-ui-increment" onClick={inc} />
               </div>
             </div>
           </Container>

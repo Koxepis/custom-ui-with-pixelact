@@ -121,7 +121,7 @@ export default function CheckboxPage() {
                   <Button size="sm" variant="secondary" onClick={() => setNewsletter(false)}>Disable Newsletter</Button>
                   <Button size="sm" variant="success" onClick={() => setDisabledNewsletter(true)}>Enable Disabled Newsletter</Button>
                   <Button size="sm" variant="warning" onClick={() => setDisabledNewsletter(false)}>Disable Disabled Newsletter</Button>
-                  <Button size="sm" variant="custom-ui" onClick={() => { setNewsletter(false); setDisabledNewsletter(false); }}>Reset All</Button>
+                  <Button size="sm" onClick={() => { setNewsletter(false); setDisabledNewsletter(false); }}>Reset All</Button>
                 </div>
               </div>
             </div>

@@ -166,62 +166,6 @@
   }
 }
 
-.custom-ui-button {
-  image-rendering: pixelated;
-  /* hide button default stuff */
-  background-color: transparent;
-  background-repeat: no-repeat;
-  border: none;
-  overflow: visible;
-  outline: none;
-  box-shadow: none; /* Override pixel__button box-shadow */
-  color: initial; /* do not inherit container text color */
-
-  /* background */
-  background: url("/assets/button/button.png") no-repeat;
-  background-clip: padding-box;
-  background-origin: padding-box;
-  background-position: center;
-  background-size: 100% 100%;
-
-  /* default size and display */
-  max-width: 100%;
-  height: auto;
-  min-height: 60px;
-  display: inline-block;
-
-  /* padding */
-  padding: 15px 35px;
-}
-
-/* button hover */
-.custom-ui-button.hover,
-.custom-ui-button:hover {
-  background-image: url("/assets/button/button-hover.png");
-}
-
-/* button clicked */
-.custom-ui-button.down,
-.custom-ui-button:active {
-  background-image: url("/assets/button/button-down.png");
-}
-
-/* custom-ui-button disabled state with grayscale filter */
-.custom-ui-button:disabled {
-  filter: grayscale(100%);
-  opacity: 0.6;
-  cursor: not-allowed;
-  pointer-events: none;
-}
-
-.custom-ui-button:disabled:hover {
-  background-image: url("/assets/button/button.png");
-}
-
-.custom-ui-button:disabled:active {
-  background-image: url("/assets/button/button.png");
-}
-
 /* Increment/Decrement icon buttons (use assets under public/assets) */
 .custom-ui-button-increment,
 .custom-ui-button-decrement {
@@ -240,7 +184,7 @@
   /* ensure no inherited transforms or translations */
   transform: none;
 
-  /* icon-like sizing (adjust if needed) */
+  /* icon-like sizing */
   display: inline-block;
   width: 32px;
   height: 32px;

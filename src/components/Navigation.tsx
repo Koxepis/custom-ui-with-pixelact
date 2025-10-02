@@ -52,7 +52,7 @@ export default function Navigation() {
           <div className="md:hidden">
             <Sheet>
               <SheetTrigger asChild>
-                <Button variant="custom-ui" size="sm">Menu</Button>
+                <Button size="sm">Menu</Button>
               </SheetTrigger>
               <SheetContent side="left" className="w-64">
                 <SheetHeader>

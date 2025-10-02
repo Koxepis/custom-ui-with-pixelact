@@ -88,22 +88,22 @@ export default function ButtonPage() {
           </div>
         </section>
 
-        {/* Custom UI Button Section */}
+        {/* Wide Buttons Section (formerly Custom UI) */}
         <section className="mb-12">
-          <h2 className="mb-6 text-2xl font-semibold">Custom UI Buttons</h2>
+          <h2 className="mb-6 text-2xl font-semibold">Wide Buttons</h2>
           <Container variant="custom-container-1">
             <div className="p-6">
-              <h3 className="mb-4 text-lg font-medium">Custom UI Button with Background Image</h3>
+              <h3 className="mb-4 text-lg font-medium">Buttons with Various Widths</h3>
               <div className="space-y-4">
                 <div className="flex flex-wrap gap-4">
-                  <Button variant="custom-ui">Default Size</Button>
-                  <Button variant="custom-ui" className="min-w-48">Wide Button</Button>
-                  <Button variant="custom-ui" className="min-w-96">Extra Wide Button</Button>
+                  <Button>Default Size</Button>
+                  <Button className="min-w-48">Wide Button</Button>
+                  <Button className="min-w-96">Extra Wide Button</Button>
                 </div>
                 <div className="flex flex-wrap gap-4">
-                  <Button variant="custom-ui" className="min-w-32">Short Text</Button>
-                  <Button variant="custom-ui" className="min-w-64">Medium Length Button Text</Button>
-                  <Button variant="custom-ui" className="min-w-80">Very Long Button Text Example</Button>
+                  <Button className="min-w-32">Short Text</Button>
+                  <Button className="min-w-64">Medium Length Button Text</Button>
+                  <Button className="min-w-80">Very Long Button Text Example</Button>
                 </div>
               </div>
             </div>
@@ -115,21 +115,11 @@ export default function ButtonPage() {
           <h2 className="mb-6 text-2xl font-semibold">Increment / Decrement</h2>
           <Container variant="custom-container-1">
             <div className="p-6">
-              <h3 className="mb-4 text-lg font-medium">Icon Buttons (Custom UI)</h3>
+              <h3 className="mb-4 text-lg font-medium">Increment / Decrement</h3>
               <div className="flex items-center gap-4">
-                <Button
-                  aria-label="Decrement"
-                  title="Decrement"
-                  variant="custom-ui-decrement"
-                  onClick={() => setCount((c) => c - 1)}
-                />
+                <Button aria-label="Decrement" title="Decrement" variant="custom-ui-decrement" onClick={() => setCount((c) => c - 1)} />
                 <span className="min-w-10 text-center text-xl font-bold">{count}</span>
-                <Button
-                  aria-label="Increment"
-                  title="Increment"
-                  variant="custom-ui-increment"
-                  onClick={() => setCount((c) => c + 1)}
-                />
+                <Button aria-label="Increment" title="Increment" variant="custom-ui-increment" onClick={() => setCount((c) => c + 1)} />
               </div>
               <div className="mt-6 flex items-center gap-4">
                 <Button aria-label="Decrement (disabled)" variant="custom-ui-decrement" disabled />
@@ -149,8 +139,6 @@ export default function ButtonPage() {
                 <div className="flex flex-wrap gap-4">
                   <Button>Normal State</Button>
                   <Button disabled>Disabled State</Button>
-                  <Button variant="custom-ui">Custom UI Normal</Button>
-                  <Button variant="custom-ui" disabled>Custom UI Disabled (Grayscale)</Button>
                 </div>
               </div>
             </div>

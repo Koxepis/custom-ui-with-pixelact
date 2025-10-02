@@ -71,7 +71,7 @@ export default function ListPage() {
                 </Button>
               </div>
 
-                <Button size="sm" variant="custom-ui"  className="w-full" onClick={() => setSelected("")}>Clear</Button>
+                <Button size="sm" className="w-full" onClick={() => setSelected("")}>Clear</Button>
               <List
                 items={basicItems}
                 selectedId={selected || undefined}

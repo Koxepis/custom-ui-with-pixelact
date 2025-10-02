@@ -16,7 +16,6 @@ const pixelButtonVariants = cva(
         success: "pixel-success__button box-shadow-margin",
         destructive: "pixel-destructive__button box-shadow-margin",
         link: "pixel-link__button bg-transparent text-link underline-offset-4 underline",
-        "custom-ui": "custom-ui-button",
         "custom-ui-increment": "custom-ui-button-increment",
         "custom-ui-decrement": "custom-ui-button-decrement",
       },
@@ -24,7 +23,6 @@ const pixelButtonVariants = cva(
         default: "h-10 px-4 py-2",
         sm: "h-9 px-3 text-xs",
         lg: "h-11 px-8 text-base",
-        rgui:"h-auto w-fit",
       },
     },
     defaultVariants: {
@@ -44,20 +42,17 @@ const Button = React.forwardRef<
   React.ComponentRef<typeof ShadcnButton>,
   PixelButtonProps
 >(({ className, variant, size, ...props }, ref) => {
-  const isCustomUi =
-    variant === "custom-ui" ||
-    variant === "custom-ui-increment" ||
-    variant === "custom-ui-decrement";
+  const isIconCustomUi =
+    variant === "custom-ui-increment" || variant === "custom-ui-decrement";
 
-  if (isCustomUi) {
-    // For custom-ui variant, render a plain button element without shadcn styling
+  if (isIconCustomUi) {
     return (
       <button
         className={cn(
           pixelButtonVariants({ variant, size: undefined }),
           className
         )}
-        ref={ref}
+        ref={ref as any}
         {...props}
       />
     );

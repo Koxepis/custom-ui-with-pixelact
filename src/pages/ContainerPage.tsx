@@ -24,7 +24,7 @@ export default function ContainerPage() {
               <h3 className="mb-4 text-lg font-medium">Custom 1</h3>
               <Container variant="custom-container-1" className="p-4 space-y-2">
                 <p className="text-white text-sm">Default container with standard border and background.</p>
-                <Button variant="custom-ui" size="sm" className="mt-1"
+                <Button size="sm" className="mt-1"
                   onClick={() => setDefaultOn((v) => !v)}>
                   Toggle
                 </Button>
@@ -37,7 +37,7 @@ export default function ContainerPage() {
               <h3 className="mb-4 text-lg font-medium">Custom 2</h3>
               <Container variant="custom-container-2" className="p-4 space-y-2">
                 <p className="text-white text-sm">Golden container with luxurious appearance.</p>
-                <Button variant="custom-ui" size="sm" className="mt-1"
+                <Button size="sm" className="mt-1"
                   onClick={() => setGoldenOn((v) => !v)}>
                   Toggle
                 </Button>
@@ -50,7 +50,7 @@ export default function ContainerPage() {
               <h3 className="mb-4 text-lg font-medium">Custom 3</h3>
               <Container variant="custom-container-3" className="p-4 space-y-2">
                 <p className="text-white text-sm">Alternative golden container design.</p>
-                <Button variant="custom-ui" size="sm" className="mt-1"
+                <Button size="sm" className="mt-1"
                   onClick={() => setGolden2On((v) => !v)}>
                   Toggle
                 </Button>
@@ -63,7 +63,7 @@ export default function ContainerPage() {
               <h3 className="mb-4 text-lg font-medium">Custom 4</h3>
               <Container variant="custom-container-4" className="p-4 space-y-2">
                 <p className="text-white text-sm">Grey container for subtle appearance.</p>
-                <Button variant="custom-ui" size="sm" className="mt-1"
+                <Button size="sm" className="mt-1"
                   onClick={() => setGreyOn((v) => !v)}>
                   Toggle
                 </Button>
@@ -76,7 +76,7 @@ export default function ContainerPage() {
               <h3 className="mb-4 text-lg font-medium">Custom 5</h3>
               <Container variant="custom-container-5" className="p-4 space-y-2">
                 <p className="text-white text-sm">New variant backed by custom-5 assets.</p>
-                <Button variant="custom-ui" size="sm" className="mt-1"
+                <Button size="sm" className="mt-1"
                   onClick={() => setCustom5On((v) => !v)}>
                   Toggle
                 </Button>
@@ -129,7 +129,7 @@ export default function ContainerPage() {
                 <p className="text-white text-sm">Container with fixed width of 400px.</p>
                 <div className="mt-4 space-y-2">
                   <PixelInput variant="custom-ui" placeholder="Input field" className="w-full" />
-                  <Button variant="custom-ui" size="sm" className="w-full">Full Width Button</Button>
+                  <Button size="sm" className="w-full">Full Width Button</Button>
                 </div>
               </Container>
             </div>
@@ -189,7 +189,7 @@ export default function ContainerPage() {
                     <label className="block text-white text-sm mb-2">Message</label>
                     <PixelInput variant="custom-ui" placeholder="Enter your message" className="w-full" />
                   </div>
-                  <Button variant="custom-ui" size="sm" className="w-full">Send Message</Button>
+                  <Button size="sm" className="w-full">Send Message</Button>
                 </div>
               </Container>
             </div>
@@ -217,7 +217,7 @@ export default function ContainerPage() {
                     <span className="text-white text-sm">67%</span>
                   </div>
                 </div>
-                <Button variant="custom-ui" size="sm" className="w-full mt-4">Refresh Status</Button>
+                <Button size="sm" className="w-full mt-4">Refresh Status</Button>
               </Container>
             </div>
           </div>
@@ -233,7 +233,7 @@ export default function ContainerPage() {
               <h3 className="mb-4 text-lg font-medium">Normal State</h3>
               <Container variant="custom-container-2">
                 <p className="text-white text-sm">This container is in its normal state and fully interactive.</p>
-                <Button variant="custom-ui" size="sm" className="mt-4">Interactive Button</Button>
+                <Button size="sm" className="mt-4">Interactive Button</Button>
               </Container>
             </div>
 
@@ -242,7 +242,7 @@ export default function ContainerPage() {
               <h3 className="mb-4 text-lg font-medium">Disabled State (Grayscale)</h3>
               <Container variant="custom-container-2" disabled>
                 <p className="text-white text-sm">This container is disabled with grayscale filter applied.</p>
-                <Button variant="custom-ui" size="sm" className="mt-4" disabled>Disabled Button</Button>
+                <Button size="sm" className="mt-4" disabled>Disabled Button</Button>
               </Container>
             </div>
           </div>
@@ -265,7 +265,7 @@ export default function ContainerPage() {
                       <label className="block text-white text-sm mb-2">Email</label>
                       <PixelInput variant="custom-ui" placeholder="email@example.com" type="email" className="w-full" />
                     </div>
-                    <Button variant="custom-ui" size="sm" className="w-full">Update Profile</Button>
+                    <Button size="sm" className="w-full">Update Profile</Button>
                   </div>
                 </div>
                 <div>
@@ -273,15 +273,15 @@ export default function ContainerPage() {
                   <div className="space-y-3">
                     <div className="flex justify-between items-center">
                       <span className="text-white text-sm">Notifications</span>
-                      <Button variant="custom-ui" size="sm">Toggle</Button>
+                      <Button size="sm">Toggle</Button>
                     </div>
                     <div className="flex justify-between items-center">
                       <span className="text-white text-sm">Dark Mode</span>
-                      <Button variant="custom-ui" size="sm">Toggle</Button>
+                      <Button size="sm">Toggle</Button>
                     </div>
                     <div className="flex justify-between items-center">
                       <span className="text-white text-sm">Auto-save</span>
-                      <Button variant="custom-ui" size="sm">Toggle</Button>
+                      <Button size="sm">Toggle</Button>
                     </div>
                   </div>
                 </div>
