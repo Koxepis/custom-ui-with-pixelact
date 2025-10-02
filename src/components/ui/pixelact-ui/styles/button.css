@@ -166,6 +166,100 @@
   }
 }
 
+/* Custom Border-Image Buttons (like container) */
+.custom-button {
+  border-radius: 0 !important;
+  image-rendering: pixelated;
+  background-color: transparent;
+  border: none; /* remove frame border */
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100% 100%;
+  background-origin: padding-box;
+  background-clip: padding-box;
+  box-shadow: none; /* override pixel button */
+  color: initial; /* avoid inheriting container text color */
+  display: inline-block;
+  padding: 10px 24px; /* inner paddings inside the frame */
+  line-height: 1.2;
+  box-sizing: border-box;
+  cursor: pointer;
+  translate: none !important;
+  transform: none !important; /* cancel pixel__button active translate */
+  color: white;
+}
+
+/* Primary */
+.custom-button-primary {
+  background-image: url("/assets/custom-button-primary-background.png");
+  text-shadow: 0 0.2rem 0 #08806c;
+}
+
+.custom-button-primary:hover {
+  background-image: url("/assets/custom-button-primary-background-hovered.png");
+}
+.custom-button-primary:active {
+  background-image: url("/assets/custom-button-primary-background-active.png");
+}
+
+/* Secondary */
+.custom-button-secondary {
+  background-image: url("/assets/custom-button-secondary-background.png");
+  text-shadow: 0 0.2rem 0 #BABFC9;
+  color: black;
+}
+.custom-button-secondary:hover {
+  background-image: url("/assets/custom-button-secondary-background-hovered.png");
+  color: black;
+}
+.custom-button-secondary:active {
+  background-image: url("/assets/custom-button-secondary-background-active.png");
+  color: black;
+}
+
+/* Error */
+.custom-button-error {
+  background-image: url("/assets/custom-button-error-background.png");
+  text-shadow: 0 0.2rem 0 #611605;
+}
+.custom-button-error:hover {
+  background-image: url("/assets/custom-button-error-background-hovered.png");
+}
+.custom-button-error:active {
+  background-image: url("/assets/custom-button-error-background-active.png");
+}
+
+/* Blue */
+.custom-button-blue {
+  background-image: url("/assets/custom-button-blue-background.png");
+  text-shadow: 0 0.2rem 0 #014F84;
+}
+.custom-button-blue:hover {
+  background-image: url("/assets/custom-button-blue-background-hovered.png");
+}
+.custom-button-blue:active {
+  background-image: url("/assets/custom-button-blue-background-active.png");
+}
+
+/* Warning */
+.custom-button-warning {
+  background-image: url("/assets/custom-button-warning-background.png");
+  text-shadow: 0 0.2rem 0 #845701;
+}
+.custom-button-warning:hover {
+  background-image: url("/assets/custom-button-warning-background-hovered.png");
+}
+.custom-button-warning:active {
+  background-image: url("/assets/custom-button-warning-background-active.png");
+}
+
+/* Disabled: grayscale & no state changes */
+.custom-button:disabled {
+  filter: grayscale(100%);
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
 /* Increment/Decrement icon buttons (use assets under public/assets) */
 .custom-ui-button-increment,
 .custom-ui-button-decrement {
@@ -191,6 +285,9 @@
   min-width: 32px;
   min-height: 32px;
   padding: 0;
+
+  transform: none;
+  translate: none;
 }
 
 /* increment states */
@@ -227,7 +324,6 @@
   filter: grayscale(100%);
   opacity: 0.6;
   cursor: not-allowed;
-  pointer-events: none;
 }
 .custom-ui-button-increment:disabled:hover,
 .custom-ui-button-increment:disabled:active {

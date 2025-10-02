@@ -21,7 +21,7 @@ export default function HomePage() {
                 buttons and custom UI buttons.
               </p>
               <Link to="/buttons">
-                <Button className="w-full">View Buttons</Button>
+                <Button className="w-full" variant="custom-button-primary">View Buttons</Button>
               </Link>
             </Container>
 
@@ -32,7 +32,7 @@ export default function HomePage() {
                 styling options.
               </p>
               <Link to="/inputs">
-                <Button className="w-full">View Inputs</Button>
+                <Button className="w-full" variant="custom-button-primary">View Inputs</Button>
               </Link>
             </Container>
 
@@ -43,7 +43,7 @@ export default function HomePage() {
                 components.
               </p>
               <Link to="/selects">
-                <Button className="w-full">View Selects</Button>
+                <Button className="w-full" variant="custom-button-primary">View Selects</Button>
               </Link>
             </Container>
 
@@ -53,7 +53,7 @@ export default function HomePage() {
                 Compare shadcn checkbox with pixelact-ui styled checkbox.
               </p>
               <Link to="/checkboxes">
-                <Button className="w-full">View Checkboxes</Button>
+                <Button className="w-full" variant="custom-button-primary">View Checkboxes</Button>
               </Link>
             </Container>
 
@@ -64,7 +64,7 @@ export default function HomePage() {
                 and keyboard support.
               </p>
               <Link to="/lists">
-                <Button className="w-full">View Lists</Button>
+                <Button className="w-full" variant="custom-button-primary">View Lists</Button>
               </Link>
             </Container>
 
@@ -75,7 +75,7 @@ export default function HomePage() {
                 aesthetics.
               </p>
               <Link to="/containers">
-                <Button className="w-full">View Containers</Button>
+                <Button className="w-full" variant="custom-button-primary">View Containers</Button>
               </Link>
             </Container>
 
@@ -85,7 +85,7 @@ export default function HomePage() {
                 Check out our custom progress bar with handles and stepper fill.
               </p>
               <Link to="/progress">
-                <Button className="w-full">View Progress</Button>
+                <Button className="w-full" variant="custom-button-primary">View Progress</Button>
               </Link>
             </Container>
           </div>

@@ -18,6 +18,11 @@ const pixelButtonVariants = cva(
         link: "pixel-link__button bg-transparent text-link underline-offset-4 underline",
         "custom-ui-increment": "custom-ui-button-increment",
         "custom-ui-decrement": "custom-ui-button-decrement",
+        "custom-button-primary": "custom-button custom-button-primary",
+        "custom-button-secondary": "custom-button custom-button-secondary",
+        "custom-button-error": "custom-button custom-button-error",
+        "custom-button-blue": "custom-button custom-button-blue",
+        "custom-button-warning": "custom-button custom-button-warning",
       },
       size: {
         default: "h-10 px-4 py-2",
@@ -44,8 +49,10 @@ const Button = React.forwardRef<
 >(({ className, variant, size, ...props }, ref) => {
   const isIconCustomUi =
     variant === "custom-ui-increment" || variant === "custom-ui-decrement";
+  const isBorderImageCustomButton =
+    typeof variant === "string" && variant.startsWith("custom-button-");
 
-  if (isIconCustomUi) {
+  if (isIconCustomUi || isBorderImageCustomButton) {
     return (
       <button
         className={cn(

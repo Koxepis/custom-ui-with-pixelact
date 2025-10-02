@@ -129,6 +129,30 @@ export default function ButtonPage() {
           </Container>
         </section>
 
+        {/* Custom Border-Image Buttons */}
+        <section className="mb-12">
+          <h2 className="mb-6 text-2xl font-semibold">Custom Border-Image Buttons</h2>
+          <Container variant="custom-container-1">
+            <div className="p-6 space-y-4">
+              <div className="flex flex-wrap gap-3">
+                <Button variant="custom-button-primary">Primary</Button>
+                <Button variant="custom-button-secondary">Secondary</Button>
+                <Button variant="custom-button-error">Error</Button>
+                <Button variant="custom-button-blue">Blue</Button>
+                <Button variant="custom-button-warning">Warning</Button>
+              </div>
+              <div className="flex flex-wrap gap-3">
+                <Button variant="custom-button-primary" disabled>
+                  Disabled Primary
+                </Button>
+                <Button variant="custom-button-secondary" disabled>
+                  Disabled Secondary
+                </Button>
+              </div>
+            </div>
+          </Container>
+        </section>
+
         {/* Interactive Examples */}
         <section className="mb-12">
           <h2 className="mb-6 text-2xl font-semibold">Interactive Examples</h2>
@@ -137,8 +161,8 @@ export default function ButtonPage() {
               <h3 className="mb-4 text-lg font-medium">Button States</h3>
               <div className="space-y-4">
                 <div className="flex flex-wrap gap-4">
-                  <Button>Normal State</Button>
-                  <Button disabled>Disabled State</Button>
+                  <Button variant="custom-button-primary">Normal State</Button>
+                  <Button variant="custom-button-primary" disabled>Disabled State</Button>
                 </div>
               </div>
             </div>
