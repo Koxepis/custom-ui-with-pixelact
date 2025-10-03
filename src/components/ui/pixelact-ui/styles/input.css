@@ -1,155 +1,37 @@
-/* Pixel Input Styles */
-.pixel__input {
-  font-family: "BoldPixels", system-ui, -apple-system, sans-serif;
-  line-height: 1.5;
-  letter-spacing: 0.5px;
-  box-shadow: var(--pixel-box-shadow);
-  border: none;
-  border-radius: 0;
-  font-size: 0.8em;
-  image-rendering: pixelated;
-  
-  &:focus {
-    outline: none;
-    box-shadow: var(--pixel-box-shadow);
-  }
-  
-  &:disabled {
-    opacity: 0.6;
-    cursor: not-allowed;
-  }
-}
-
-/* Custom UI Input Styles */
-.custom-ui-input {
-  /* set size and colors */
+/* Custom Input 1 (background-based using assets) */
+.custom-input-1 {
   box-sizing: border-box;
+  background-color: transparent;
   color: white;
-  /* text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black; */
-  font-size: 0.9em;
-  line-height: 32px;
-  background: #4e4a4e;
   max-width: 100%;
-  width: 100%;
   padding-left: 10px;
   padding-right: 10px;
   padding-top: 5px;
   padding-bottom: 5px;
-  min-height: 30px;
   image-rendering: pixelated;
-  transition: box-shadow 0.15s ease, background-color 0.15s ease;
-  
-  /* enable text selecting */
-  -webkit-touch-callout: text;
-  -webkit-user-select: text;
-  -khtml-user-select: text;
-  -moz-user-select: text;
-  -ms-user-select: text;
-  user-select: text;
-  -webkit-tap-highlight-color: rgba(0,0,0,0.5);
-  
-  /* remove default styling */
-  border: none;
   outline: none;
-  border-radius: 0;
-  font-family: "BoldPixels", system-ui, -apple-system, sans-serif;
+  background-image: url("/assets/custom-input-field.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100% 100%;
+  min-height: 32px;
 }
-
-/* Focus/active pixel shadow */
-.custom-ui-input:focus,
-.custom-ui-input:active {
+.custom-input-1:hover,
+.custom-input-1:focus,
+.custom-input-1[readonly] {
   outline: none;
-  box-shadow: var(--pixel-box-shadow);
+  background-image: url("/assets/custom-input-field.png");
 }
-
-/* Error (destructive) shadow when invalid (ARIA or native) */
-.custom-ui-input[aria-invalid="true"],
-.custom-ui-input[aria-invalid="true"]:focus,
-.custom-ui-input[aria-invalid="true"]:active,
-.custom-ui-input:invalid,
-.custom-ui-input:invalid:focus,
-.custom-ui-input:invalid:active {
-  box-shadow: var(--pixel-box-shadow-destructive);
+.custom-input-1:focus{
+  background-image: url("/assets/custom-input-field-focus.png");
 }
-
-/* Custom UI Textarea Styles */
-.custom-ui-textarea {
-  /* set size and colors */
-  box-sizing: border-box;
-  color: white;
-  /* text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black; */
-  font-size: 0.9em;
-  line-height: 22px;
-  background: #4e4a4e;
-  max-width: 100%;
-  width: 100%;
-  padding-left: 10px;
-  padding-right: 10px;
-  padding-top: 7px;
-  padding-bottom: 7px;
-  height: 80px;
-  resize: none;
-  min-height: 80px;
-  image-rendering: pixelated;
-  
-  /* enable text selecting */
-  -webkit-touch-callout: text;
-  -webkit-user-select: text;
-  -khtml-user-select: text;
-  -moz-user-select: text;
-  -ms-user-select: text;
-  user-select: text;
-  -webkit-tap-highlight-color: rgba(0,0,0,0.5);
-  
-  /* remove default styling */
-  border: none;
-  outline: none;
-  border-radius: 0;
-  font-family: "BoldPixels", system-ui, -apple-system, sans-serif;
-}
-
-/* Focus/active pixel shadow for textarea */
-.custom-ui-textarea:focus,
-.custom-ui-textarea:active {
-  outline: none;
-  box-shadow: var(--pixel-box-shadow);
-}
-
-/* Error (destructive) shadow for textarea */
-.custom-ui-textarea[aria-invalid="true"],
-.custom-ui-textarea[aria-invalid="true"]:focus,
-.custom-ui-textarea[aria-invalid="true"]:active,
-.custom-ui-textarea:invalid,
-.custom-ui-textarea:invalid:focus,
-.custom-ui-textarea:invalid:active {
-  box-shadow: var(--pixel-box-shadow-destructive);
-}
-
-/* selection highlight for custom UI inputs */
-.custom-ui-input::selection,
-.custom-ui-textarea::selection {
-  background: rgba(0,0,0,0.5);
-}
-
-.custom-ui-input::-moz-selection,
-.custom-ui-textarea::-moz-selection {
-  background: rgba(0,0,0,0.5);
-}
-
-/* Custom UI Input disabled state with grayscale filter */
-.custom-ui-input:disabled {
+.custom-input-1:disabled {
   filter: grayscale(100%);
   opacity: 0.6;
   cursor: not-allowed;
   pointer-events: none;
-  background: #3a363a;
 }
-
-/* Custom UI Textarea disabled state with grayscale filter */
-.custom-ui-textarea:disabled {
-  filter: grayscale(100%);
-  opacity: 0.6;
-  cursor: not-allowed;
-  pointer-events: none;
-  background: #3a363a;
+.custom-input-1[aria-invalid="true"],
+.custom-input-1:invalid {
+  background-image: url("/assets/custom-input-field-error.png");
 }

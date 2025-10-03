@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Container } from "../components/ui/pixelact-ui/container";
 import { Button } from "../components/ui/pixelact-ui/button";
-import { Input as PixelInput } from "../components/ui/pixelact-ui/input";
+import { Input as CustomInput } from "../components/ui/pixelact-ui/input";
 
 export default function ContainerPage() {
   const [defaultOn, setDefaultOn] = useState(false);
@@ -128,7 +128,7 @@ export default function ContainerPage() {
               <Container variant="custom-container-1" className="w-[400px]">
                 <p className="text-white text-sm">Container with fixed width of 400px.</p>
                 <div className="mt-4 space-y-2">
-                  <PixelInput variant="custom-ui" placeholder="Input field" className="w-full" />
+                  <CustomInput variant="custom-input-1" placeholder="Input field" className="w-full" />
                   <Button size="sm" className="w-full">Full Width Button</Button>
                 </div>
               </Container>
@@ -179,15 +179,15 @@ export default function ContainerPage() {
                 <div className="space-y-4">
                   <div>
                     <label className="block text-white text-sm mb-2">Name</label>
-                    <PixelInput variant="custom-ui" placeholder="Enter your name" className="w-full" />
+                    <CustomInput variant="custom-input-1" placeholder="Enter your name" className="w-full" />
                   </div>
                   <div>
                     <label className="block text-white text-sm mb-2">Email</label>
-                    <PixelInput variant="custom-ui" placeholder="Enter your email" type="email" className="w-full" />
+                    <CustomInput variant="custom-input-1" placeholder="Enter your email" type="email" className="w-full" />
                   </div>
                   <div>
                     <label className="block text-white text-sm mb-2">Message</label>
-                    <PixelInput variant="custom-ui" placeholder="Enter your message" className="w-full" />
+                    <CustomInput variant="custom-input-1" placeholder="Enter your message" className="w-full" />
                   </div>
                   <Button size="sm" className="w-full">Send Message</Button>
                 </div>
@@ -259,11 +259,11 @@ export default function ContainerPage() {
                   <div className="space-y-4">
                     <div>
                       <label className="block text-white text-sm mb-2">Username</label>
-                      <PixelInput variant="custom-ui" placeholder="username" className="w-full" />
+                      <CustomInput variant="custom-input-1" placeholder="username" className="w-full" />
                     </div>
                     <div>
                       <label className="block text-white text-sm mb-2">Email</label>
-                      <PixelInput variant="custom-ui" placeholder="email@example.com" type="email" className="w-full" />
+                      <CustomInput variant="custom-input-1" placeholder="email@example.com" type="email" className="w-full" />
                     </div>
                     <Button size="sm" className="w-full">Update Profile</Button>
                   </div>

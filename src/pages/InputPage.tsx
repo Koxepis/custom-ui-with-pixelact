@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Input as ShadcnInput } from "../components/ui/input";
-import { Input as PixelInput } from "../components/ui/pixelact-ui/input";
-import { Textarea as PixelTextarea } from "../components/ui/pixelact-ui/textarea";
+import { Input as CustomInput } from "../components/ui/pixelact-ui/input";
+// Removed custom textarea; using native textarea
 import { Container } from "@/components/ui/pixelact-ui/container";
 
 export default function InputPage() {
@@ -20,116 +20,6 @@ export default function InputPage() {
     <div className="min-h-screen bg-background p-8">
       <div className="mx-auto max-w-4xl">
         <h1 className="mb-8 text-4xl font-bold">Input Components</h1>
-        
-        {/* Shadcn Inputs Section */}
-        <section className="mb-12">
-          <h2 className="mb-6 text-2xl font-semibold">Shadcn Inputs</h2>
-          <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
-            
-            {/* Basic Input */}
-            <Container variant="custom-container-1">
-              <div className="p-6">
-                <h3 className="mb-4 text-lg font-medium">Basic Input</h3>
-                <div className="space-y-3">
-                  <ShadcnInput placeholder="Enter your text..." />
-                  <ShadcnInput placeholder="Email address" type="email" />
-                  <ShadcnInput placeholder="Password" type="password" />
-                </div>
-              </div>
-            </Container>
-
-            {/* Input States */}
-            <Container variant="custom-container-1">
-              <div className="p-6">
-                <h3 className="mb-4 text-lg font-medium">Input States</h3>
-                <div className="space-y-3">
-                  <ShadcnInput placeholder="Normal state" />
-                  <ShadcnInput placeholder="Disabled state" disabled />
-                  <ShadcnInput placeholder="With value" defaultValue="Hello World" />
-                </div>
-              </div>
-            </Container>
-
-            {/* Input Sizes */}
-            <Container variant="custom-container-1">
-              <div className="p-6">
-                <h3 className="mb-4 text-lg font-medium">Input Sizes</h3>
-                <div className="space-y-3">
-                  <ShadcnInput placeholder="Default size" />
-                  <ShadcnInput placeholder="Small size" className="h-8 text-sm" />
-                  <ShadcnInput placeholder="Large size" className="h-12 text-lg" />
-                </div>
-              </div>
-            </Container>
-
-            {/* Input Variants */}
-            <Container variant="custom-container-1">
-              <div className="p-6">
-                <h3 className="mb-4 text-lg font-medium">Input Variants</h3>
-                <div className="space-y-3">
-                  <ShadcnInput placeholder="Default variant" />
-                  <ShadcnInput placeholder="Error state" className="border-destructive focus-visible:ring-destructive" />
-                  <ShadcnInput placeholder="Success state" className="border-green-500 focus-visible:ring-green-500" />
-                </div>
-              </div>
-            </Container>
-          </div>
-        </section>
-
-        {/* Pixel Inputs Section */}
-        <section className="mb-12">
-          <h2 className="mb-6 text-2xl font-semibold">Pixel Inputs</h2>
-          <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
-            
-            {/* Basic Pixel Input */}
-            <Container variant="custom-container-2">
-              <div className="p-6">
-                <h3 className="mb-4 text-lg font-medium">Basic Pixel Input</h3>
-                <div className="space-y-3">
-                  <PixelInput placeholder="Enter your text..." />
-                  <PixelInput placeholder="Email address" type="email" />
-                  <PixelInput placeholder="Password" type="password" />
-                </div>
-              </div>
-            </Container>
-
-            {/* Pixel Input States */}
-            <Container variant="custom-container-2">
-              <div className="p-6">
-                <h3 className="mb-4 text-lg font-medium">Pixel Input States</h3>
-                <div className="space-y-3">
-                  <PixelInput placeholder="Normal state" />
-                  <PixelInput placeholder="Disabled state" disabled />
-                  <PixelInput placeholder="With value" defaultValue="Hello World" />
-                </div>
-              </div>
-            </Container>
-
-            {/* Pixel Input Sizes */}
-            <Container variant="custom-container-2">
-              <div className="p-6">
-                <h3 className="mb-4 text-lg font-medium">Pixel Input Sizes</h3>
-                <div className="space-y-3">
-                  <PixelInput placeholder="Default size" />
-                  <PixelInput placeholder="Small size" className="h-8 text-sm" />
-                  <PixelInput placeholder="Large size" className="h-12 text-lg" />
-                </div>
-              </div>
-            </Container>
-
-            {/* Pixel Input Widths */}
-            <Container variant="custom-container-2">
-              <div className="p-6">
-                <h3 className="mb-4 text-lg font-medium">Pixel Input Widths</h3>
-                <div className="space-y-3">
-                  <PixelInput placeholder="Full width" className="w-full" />
-                  <PixelInput placeholder="Half width" className="w-1/2" />
-                  <PixelInput placeholder="Fixed width" className="w-64" />
-                </div>
-              </div>
-            </Container>
-          </div>
-        </section>
 
         {/* Form Examples */}
         <section className="mb-12">
@@ -137,7 +27,7 @@ export default function InputPage() {
           <div className="grid grid-cols-1 gap-6 lg:grid-cols-2">
             
             {/* Shadcn Form */}
-            <Container variant="custom-container-1">
+            <Container variant="custom-container-5">
               <div className="p-6">
                 <h3 className="mb-4 text-lg font-medium">Shadcn Form</h3>
                 <form className="space-y-4">
@@ -158,21 +48,21 @@ export default function InputPage() {
             </Container>
 
             {/* Pixel Form */}
-            <Container variant="custom-container-2">
+            <Container variant="custom-container-5">
               <div className="p-6">
                 <h3 className="mb-4 text-lg font-medium">Pixel Form</h3>
                 <form className="space-y-4">
                   <div>
                     <label className="mb-2 block text-sm font-medium">Name</label>
-                    <PixelInput placeholder="Enter your name" />
+                  <CustomInput variant="custom-input-1" placeholder="Enter your name" />
                   </div>
                   <div>
                     <label className="mb-2 block text-sm font-medium">Email</label>
-                    <PixelInput placeholder="Enter your email" type="email" />
+                  <CustomInput variant="custom-input-1" placeholder="Enter your email" type="email" />
                   </div>
                   <div>
                     <label className="mb-2 block text-sm font-medium">Message</label>
-                    <PixelInput placeholder="Enter your message" />
+                  <CustomInput variant="custom-input-1" placeholder="Enter your message" />
                   </div>
                 </form>
               </div>
@@ -182,53 +72,70 @@ export default function InputPage() {
 
         {/* Custom UI Inputs Section */}
         <section className="mb-12">
-          <h2 className="mb-6 text-2xl font-semibold">Custom UI Inputs</h2>
+          <h2 className="mb-6 text-2xl font-semibold">Custom Inputs</h2>
           <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
             
             {/* Basic Custom UI Input */}
-            <Container variant="custom-container-3">
+            <Container variant="custom-container-5">
               <div className="p-6">
                 <h3 className="mb-4 text-lg font-medium">Basic Custom UI Input</h3>
                 <div className="space-y-3">
-                  <PixelInput variant="custom-ui" placeholder="Enter your text..." />
-                  <PixelInput variant="custom-ui" placeholder="Email address" type="email" />
-                  <PixelInput variant="custom-ui" placeholder="Password" type="password" />
+                  <CustomInput variant="custom-input-1" placeholder="Enter your text..." />
+                  <CustomInput variant="custom-input-1" placeholder="Email address" type="email" />
+                  <CustomInput variant="custom-input-1" placeholder="Password" type="password" />
                 </div>
               </div>
             </Container>
 
             {/* Custom UI Input States */}
-            <Container variant="custom-container-3">
+            <Container variant="custom-container-5">
               <div className="p-6">
                 <h3 className="mb-4 text-lg font-medium">Custom UI Input States</h3>
                 <div className="space-y-3">
-                  <PixelInput variant="custom-ui" placeholder="Normal state" />
-                  <PixelInput variant="custom-ui" placeholder="Disabled state (grayscale)" disabled />
-                  <PixelInput variant="custom-ui" placeholder="With value" defaultValue="Hello World" />
-                </div>
-              </div>
-            </Container>
-
-            {/* Custom UI Textarea */}
-            <Container variant="custom-container-3">
-              <div className="p-6">
-                <h3 className="mb-4 text-lg font-medium">Custom UI Textarea</h3>
-                <div className="space-y-3">
-                  <PixelTextarea variant="custom-ui" placeholder="Enter your message..." />
-                  <PixelTextarea variant="custom-ui" placeholder="Disabled textarea (grayscale)" disabled />
-                  <PixelTextarea variant="custom-ui" placeholder="With content" defaultValue="This is some sample text content." />
+                  <CustomInput variant="custom-input-1" placeholder="Normal state" />
+                  <CustomInput variant="custom-input-1" placeholder="Disabled state (grayscale)" disabled />
+                  <CustomInput variant="custom-input-1" placeholder="With value" defaultValue="Hello World" />
                 </div>
               </div>
             </Container>
 
             {/* Custom UI Input Sizes */}
-            <Container variant="custom-container-3">
+            <Container variant="custom-container-5">
               <div className="p-6">
                 <h3 className="mb-4 text-lg font-medium">Custom UI Input Sizes</h3>
+                <div className="flex flex-col space-y-3">
+                  <CustomInput variant="custom-input-1" placeholder="Background input (medium)" className="w-3/5" />
+                  <CustomInput variant="custom-input-1" placeholder="Custom height via class" className="h-8 text-sm w-2/5" />
+                  <CustomInput variant="custom-input-1" placeholder="Full width via class" className="w-full" />
+                </div>
+              </div>
+            </Container>
+          </div>
+        </section>
+
+        {/* Custom Input 1 (Background-based) */}
+        <section className="mb-12">
+          <h2 className="mb-6 text-2xl font-semibold">Custom Input 1</h2>
+          <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
+            {/* Basic States */}
+            <Container variant="custom-container-5">
+              <div className="p-6">
+                <h3 className="mb-4 text-lg font-medium">Basic States</h3>
                 <div className="space-y-3">
-                  <PixelInput variant="custom-ui" placeholder="Default size" />
-                  <PixelInput variant="custom-ui" placeholder="Small size" className="h-8 text-sm" />
-                  <PixelInput variant="custom-ui" placeholder="Large size" className="h-12 text-lg" />
+                  <CustomInput variant="custom-input-1" placeholder="Default / Hover / Focus use same background" />
+                  <CustomInput variant="custom-input-1" placeholder="Disabled (grayscale)" disabled />
+                  <CustomInput variant="custom-input-1" placeholder="Readonly" readOnly defaultValue="Read only value" />
+                </div>
+              </div>
+            </Container>
+
+            {/* Validation */}
+            <Container variant="custom-container-5">
+              <div className="p-6">
+                <h3 className="mb-4 text-lg font-medium">Validation</h3>
+                <div className="space-y-3">
+                  <CustomInput variant="custom-input-1" placeholder="Error/invalid background" aria-invalid />
+                  <CustomInput variant="custom-input-1" placeholder="Active state triggers on mousedown" />
                 </div>
               </div>
             </Container>
@@ -238,7 +145,7 @@ export default function InputPage() {
         {/* Interactive Examples */}
         <section className="mb-12">
           <h2 className="mb-6 text-2xl font-semibold">Interactive Examples</h2>
-          <Container variant="custom-container-2">
+          <Container variant="custom-container-5">
             <div className="p-6">
             <h3 className="mb-4 text-lg font-medium">Focus States & Validation</h3>
             <div className="grid grid-cols-1 gap-6 md:grid-cols-3">
@@ -268,11 +175,11 @@ export default function InputPage() {
               <div className="space-y-4">
                 <div>
                   <label className="mb-2 block text-sm font-medium">Pixel Required Field</label>
-                  <PixelInput placeholder="This field is required" required />
+                  <CustomInput variant="custom-input-1" placeholder="This field is required" required />
                 </div>
                 <div>
                   <label className="mb-2 block text-sm font-medium">Pixel Number Only (with error)</label>
-                  <PixelInput
+                  <CustomInput variant="custom-input-1"
                     placeholder="Numbers only"
                     value={pixelNumber}
                     onChange={(e) => {
@@ -290,12 +197,11 @@ export default function InputPage() {
               <div className="space-y-4">
                 <div>
                   <label className="mb-2 block text-sm font-medium">Custom UI Required Field</label>
-                  <PixelInput variant="custom-ui" placeholder="This field is required" required />
+                  <CustomInput variant="custom-input-1" placeholder="This field is required" required />
                 </div>
                 <div>
-                  <label className="mb-2 block text-sm font-medium">Custom UI Email (with error)</label>
-                  <PixelInput
-                    variant="custom-ui"
+                  <label className="mb-2 block text-sm font-medium">Email (with error)</label>
+                  <CustomInput variant="custom-input-1"
                     placeholder="name@example.com"
                     value={customEmail}
                     onChange={(e) => {
@@ -318,27 +224,27 @@ export default function InputPage() {
         {/* Custom UI Form Example */}
         <section className="mb-12">
           <h2 className="mb-6 text-2xl font-semibold">Custom UI Form Example</h2>
-          <Container variant="custom-container-3">
+          <Container variant="custom-container-5">
             <div className="p-6">
             <h3 className="mb-4 text-lg font-medium">Complete Custom UI Form</h3>
             <form className="space-y-4">
               <div className="grid grid-cols-1 gap-4 md:grid-cols-2">
                 <div>
                   <label className="mb-2 block text-sm font-medium text-white">Name</label>
-                  <PixelInput variant="custom-ui" placeholder="Enter your name" />
+                  <CustomInput variant="custom-input-1" placeholder="Enter your name" />
                 </div>
                 <div>
                   <label className="mb-2 block text-sm font-medium text-white">Email</label>
-                  <PixelInput variant="custom-ui" placeholder="Enter your email" type="email" />
+                  <CustomInput variant="custom-input-1" placeholder="Enter your email" type="email" />
                 </div>
               </div>
               <div>
                 <label className="mb-2 block text-sm font-medium text-white">Subject</label>
-                <PixelInput variant="custom-ui" placeholder="Enter subject" />
+                <CustomInput variant="custom-input-1" placeholder="Enter subject" />
               </div>
               <div>
                 <label className="mb-2 block text-sm font-medium text-white">Message</label>
-                <PixelTextarea variant="custom-ui" placeholder="Enter your message..." />
+                <textarea placeholder="Enter your message..." className="w-full h-24 rounded-none border-0 outline-none p-2 bg-[#4e4a4e] text-white" />
               </div>
             </form>
             </div>
