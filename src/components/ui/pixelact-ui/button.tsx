@@ -23,6 +23,7 @@ const pixelButtonVariants = cva(
         "custom-button-error": "custom-button custom-button-error",
         "custom-button-blue": "custom-button custom-button-blue",
         "custom-button-warning": "custom-button custom-button-warning",
+        "custom-pill-button": "custom-button custom-pill-button",
       },
       size: {
         default: "h-10 px-4 py-2",

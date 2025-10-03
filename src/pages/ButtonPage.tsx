@@ -140,6 +140,7 @@ export default function ButtonPage() {
                 <Button variant="custom-button-error">Error</Button>
                 <Button variant="custom-button-blue">Blue</Button>
                 <Button variant="custom-button-warning">Warning</Button>
+                <Button variant="custom-pill-button">Pill</Button>
               </div>
               <div className="flex flex-wrap gap-3">
                 <Button variant="custom-button-primary" disabled>

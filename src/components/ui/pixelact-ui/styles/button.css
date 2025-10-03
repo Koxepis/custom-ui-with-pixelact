@@ -253,6 +253,17 @@
   background-image: url("/assets/custom-button-warning-background-active.png");
 }
 
+/* Pill Button */
+.custom-pill-button {
+  background-image: url("/assets/custom-pill-button.png");
+}
+.custom-pill-button:hover {
+  background-image: url("/assets/custom-pill-button-hovered.png");
+}
+.custom-pill-button:active {
+  background-image: url("/assets/custom-pill-button-active.png");
+}
+
 /* Disabled: grayscale & no state changes */
 .custom-button:disabled {
   filter: grayscale(100%);
